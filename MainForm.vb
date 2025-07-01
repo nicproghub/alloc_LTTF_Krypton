@@ -187,11 +187,11 @@ NotInheritable Class MainForm
 
 	Private Sub _oRefreshAllButton_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles oRefreshAllButton.ItemClick
 		gvr.BeginDataUpdate()
-		gvs.BeginDataUpdate()
+		'gvs.BeginDataUpdate()
 		gvm.BeginDataUpdate()
 		gvi.BeginDataUpdate()
 		gve.BeginDataUpdate()
-		gvt.BeginDataUpdate()
+		'gvt.BeginDataUpdate()
 		gvo.BeginDataUpdate()
 		oRefreshAllButton.Enabled = False
 
@@ -217,11 +217,11 @@ NotInheritable Class MainForm
 	Private Sub bwRefresh_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwRefresh.RunWorkerCompleted
 		Dim em As String = e.Result(0)
 		gvr.EndDataUpdate()
-		gvs.EndDataUpdate()
+		'gvs.EndDataUpdate()
 		gvm.EndDataUpdate()
 		gvi.EndDataUpdate()
 		gve.EndDataUpdate()
-		gvt.EndDataUpdate()
+		'gvt.EndDataUpdate()
 		gvo.EndDataUpdate()
 		oRefreshAllButton.Enabled = True
 
@@ -1558,21 +1558,21 @@ NotInheritable Class MainForm
 		sfd.Filter = save_pdf
 		sfd.FileName = ""
 		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToPdf(sfd.FileName)
+		'gvs.ExportToPdf(sfd.FileName)
 	End Sub
 
 	Private Sub _oRiskExport_Excel_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Excel.ItemClick
 		sfd.Filter = save_xls
 		sfd.FileName = ""
 		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToXlsx(sfd.FileName)
+		'gvs.ExportToXlsx(sfd.FileName)
 	End Sub
 
 	Private Sub _oRiskExport_CSV_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_CSV.ItemClick
 		sfd.Filter = save_csv
 		sfd.FileName = ""
 		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToCsv(sfd.FileName)
+		'gvs.ExportToCsv(sfd.FileName)
 	End Sub
 
 
@@ -1580,7 +1580,7 @@ NotInheritable Class MainForm
 		sfd.Filter = save_html
 		sfd.FileName = ""
 		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToHtml(sfd.FileName)
+		'gvs.ExportToHtml(sfd.FileName)
 	End Sub
 
 	Private Sub _oSetFolderButton_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oSetFolderButton.ItemClick
@@ -1756,6 +1756,7 @@ NotInheritable Class MainForm
 		Dim en As Boolean = (e.FocusedRowHandle >= 0)
 		oDeleteButton.Enabled = en
 	End Sub
+
 
 	'Private Sub refreshExchange(sender As Object, e As WaitWindowEventArgs)
 	'	Dim em As String = ""
