@@ -34,3 +34,105 @@ D:\projects\upwork\Steven_Biggs\LTFFAlloc2\obj\Debug\LTFFAlloc2.vbproj.GenerateR
 D:\projects\upwork\Steven_Biggs\LTFFAlloc2\obj\Debug\LTFFAlloc2.exe.licenses
 D:\projects\upwork\Steven_Biggs\LTFFAlloc2\obj\Debug\LTFFAlloc2.exe
 D:\projects\upwork\Steven_Biggs\LTFFAlloc2\obj\Debug\LTFFAlloc2.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00\obj\Debug\LTFFAlloc2.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\app.mdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\LTFFAlloc2.exe.config
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\LTFFAlloc2.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Data.Desktop.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Data.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Drawing.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Office.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Pdf.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Printing.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Export.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Utils.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraBars.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraEditors.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraGrid.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraLayout.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraPrinting.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Pdf.v24.2.Drawing.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Sparkline.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraTreeList.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Drawing.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Data.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Pdf.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Office.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Printing.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Data.Desktop.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Utils.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraBars.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraEditors.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraGrid.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraLayout.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraPrinting.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Pdf.v24.2.Drawing.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.Sparkline.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\bin\Debug\DevExpress.XtraTreeList.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.vbproj.CoreCompileInputs.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.vbproj.Up2Date
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Source20160705_00 - Copy\obj\Debug\LTFFAlloc2.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\app.mdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\LTFFAlloc2.exe.config
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\LTFFAlloc2.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Data.Desktop.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Data.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Drawing.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Office.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Pdf.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Printing.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.RichEdit.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.RichEdit.v24.2.Export.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Utils.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraBars.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraEditors.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraGrid.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraLayout.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraPrinting.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Pdf.v24.2.Drawing.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Sparkline.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraTreeList.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Drawing.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Data.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Pdf.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Office.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.RichEdit.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Printing.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Data.Desktop.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Utils.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraBars.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraEditors.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraGrid.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraLayout.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraPrinting.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Pdf.v24.2.Drawing.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.Sparkline.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\bin\Debug\DevExpress.XtraTreeList.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.vbproj.CoreCompileInputs.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.vbproj.Up2Date
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2source_nic\obj\Debug\LTFFAlloc2.pdb
