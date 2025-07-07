@@ -34,7 +34,6 @@ Partial Class MainForm
         Me.Bar1 = New DevExpress.XtraBars.Bar()
         Me.oSetFolderButton = New DevExpress.XtraBars.BarButtonItem()
         Me.oRefreshAllButton = New DevExpress.XtraBars.BarButtonItem()
-        Me.oCalcButton = New DevExpress.XtraBars.BarButtonItem()
         Me.oMktMciUpdateButton = New DevExpress.XtraBars.BarButtonItem()
         Me.SkinBarSubItem1 = New DevExpress.XtraBars.SkinBarSubItem()
         Me.Bar3 = New DevExpress.XtraBars.Bar()
@@ -102,6 +101,7 @@ Partial Class MainForm
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.oCalcButton = New DevExpress.XtraBars.BarButtonItem()
         Me.ttc = New DevExpress.Utils.DefaultToolTipController(Me.components)
         Me.oNav = New DevExpress.XtraBars.Navigation.NavigationFrame()
         Me.s1 = New DevExpress.XtraBars.Navigation.NavigationPage()
@@ -137,7 +137,6 @@ Partial Class MainForm
         Me.gvo = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colc110 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc24 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.bsSector = New System.Windows.Forms.BindingSource(Me.components)
         Me.s4 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.gce = New DevExpress.XtraGrid.GridControl()
         Me.bsExchange = New System.Windows.Forms.BindingSource(Me.components)
@@ -148,6 +147,7 @@ Partial Class MainForm
         Me.colxDat01 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colxDat11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.bsSector = New System.Windows.Forms.BindingSource(Me.components)
         Me.OfficeNavigationBar1 = New DevExpress.XtraBars.Navigation.OfficeNavigationBar()
         Me.dlf = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.ssm = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.LTFFAlloc2.WaitForm1), False, False)
@@ -179,11 +179,11 @@ Partial Class MainForm
         CType(Me.gco, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bsSector, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.s4.SuspendLayout()
         CType(Me.gce, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gve, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsSector, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OfficeNavigationBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -246,7 +246,7 @@ Partial Class MainForm
         Me.Bar1.DockCol = 0
         Me.Bar1.DockRow = 0
         Me.Bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oSetFolderButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oRefreshAllButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(Me.oCalcButton, True), New DevExpress.XtraBars.LinkPersistInfo(Me.oMktMciUpdateButton, True), New DevExpress.XtraBars.LinkPersistInfo(Me.SkinBarSubItem1)})
+        Me.Bar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oSetFolderButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oRefreshAllButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(Me.oMktMciUpdateButton, True), New DevExpress.XtraBars.LinkPersistInfo(Me.SkinBarSubItem1)})
         Me.Bar1.OptionsBar.AllowQuickCustomization = False
         Me.Bar1.OptionsBar.DisableClose = True
         Me.Bar1.OptionsBar.DisableCustomization = True
@@ -268,12 +268,6 @@ Partial Class MainForm
         Me.oRefreshAllButton.Id = 5
         Me.oRefreshAllButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.refresh_16x16
         Me.oRefreshAllButton.Name = "oRefreshAllButton"
-        '
-        'oCalcButton
-        '
-        Me.oCalcButton.Caption = "Calculate"
-        Me.oCalcButton.Id = 7
-        Me.oCalcButton.Name = "oCalcButton"
         '
         'oMktMciUpdateButton
         '
@@ -654,8 +648,6 @@ Partial Class MainForm
         Me.colc71.MinWidth = 112
         Me.colc71.Name = "colc71"
         Me.colc71.OptionsColumn.FixedWidth = True
-        Me.colc71.Visible = True
-        Me.colc71.VisibleIndex = 5
         Me.colc71.Width = 112
         '
         'colc91
@@ -667,8 +659,6 @@ Partial Class MainForm
         Me.colc91.MinWidth = 75
         Me.colc91.Name = "colc91"
         Me.colc91.OptionsColumn.FixedWidth = True
-        Me.colc91.Visible = True
-        Me.colc91.VisibleIndex = 6
         '
         'colc10
         '
@@ -679,8 +669,6 @@ Partial Class MainForm
         Me.colc10.MinWidth = 112
         Me.colc10.Name = "colc10"
         Me.colc10.OptionsColumn.FixedWidth = True
-        Me.colc10.Visible = True
-        Me.colc10.VisibleIndex = 7
         Me.colc10.Width = 112
         '
         'colc111
@@ -693,8 +681,6 @@ Partial Class MainForm
         Me.colc111.Name = "colc111"
         Me.colc111.OptionsColumn.AllowEdit = False
         Me.colc111.OptionsColumn.FixedWidth = True
-        Me.colc111.Visible = True
-        Me.colc111.VisibleIndex = 8
         Me.colc111.Width = 112
         '
         'colc12
@@ -705,7 +691,7 @@ Partial Class MainForm
         Me.colc12.Name = "colc12"
         Me.colc12.OptionsColumn.FixedWidth = True
         Me.colc12.Visible = True
-        Me.colc12.VisibleIndex = 9
+        Me.colc12.VisibleIndex = 5
         Me.colc12.Width = 112
         '
         'colc13
@@ -719,7 +705,7 @@ Partial Class MainForm
         Me.colc13.OptionsColumn.AllowEdit = False
         Me.colc13.OptionsColumn.FixedWidth = True
         Me.colc13.Visible = True
-        Me.colc13.VisibleIndex = 10
+        Me.colc13.VisibleIndex = 6
         Me.colc13.Width = 90
         '
         'colc14
@@ -733,7 +719,7 @@ Partial Class MainForm
         Me.colc14.OptionsColumn.AllowEdit = False
         Me.colc14.OptionsColumn.FixedWidth = True
         Me.colc14.Visible = True
-        Me.colc14.VisibleIndex = 11
+        Me.colc14.VisibleIndex = 7
         Me.colc14.Width = 112
         '
         'colc15
@@ -745,8 +731,6 @@ Partial Class MainForm
         Me.colc15.MinWidth = 90
         Me.colc15.Name = "colc15"
         Me.colc15.OptionsColumn.FixedWidth = True
-        Me.colc15.Visible = True
-        Me.colc15.VisibleIndex = 12
         Me.colc15.Width = 90
         '
         'colc16
@@ -758,8 +742,6 @@ Partial Class MainForm
         Me.colc16.MinWidth = 90
         Me.colc16.Name = "colc16"
         Me.colc16.OptionsColumn.FixedWidth = True
-        Me.colc16.Visible = True
-        Me.colc16.VisibleIndex = 13
         Me.colc16.Width = 90
         '
         'colc17
@@ -771,8 +753,6 @@ Partial Class MainForm
         Me.colc17.MinWidth = 112
         Me.colc17.Name = "colc17"
         Me.colc17.OptionsColumn.FixedWidth = True
-        Me.colc17.Visible = True
-        Me.colc17.VisibleIndex = 14
         Me.colc17.Width = 112
         '
         'colc18
@@ -784,7 +764,7 @@ Partial Class MainForm
         Me.colc18.OptionsColumn.FixedWidth = True
         Me.colc18.ToolTip = "Trading"
         Me.colc18.Visible = True
-        Me.colc18.VisibleIndex = 15
+        Me.colc18.VisibleIndex = 8
         Me.colc18.Width = 60
         '
         'colc19
@@ -796,7 +776,7 @@ Partial Class MainForm
         Me.colc19.OptionsColumn.FixedWidth = True
         Me.colc19.ToolTip = "Open Position"
         Me.colc19.Visible = True
-        Me.colc19.VisibleIndex = 16
+        Me.colc19.VisibleIndex = 9
         Me.colc19.Width = 60
         '
         'colc20
@@ -808,7 +788,7 @@ Partial Class MainForm
         Me.colc20.OptionsColumn.FixedWidth = True
         Me.colc20.ToolTip = "# of Contract"
         Me.colc20.Visible = True
-        Me.colc20.VisibleIndex = 17
+        Me.colc20.VisibleIndex = 10
         '
         'colc211
         '
@@ -820,7 +800,7 @@ Partial Class MainForm
         Me.colc211.Name = "colc211"
         Me.colc211.OptionsColumn.FixedWidth = True
         Me.colc211.Visible = True
-        Me.colc211.VisibleIndex = 18
+        Me.colc211.VisibleIndex = 11
         Me.colc211.Width = 90
         '
         'colc22
@@ -833,7 +813,7 @@ Partial Class MainForm
         Me.colc22.Name = "colc22"
         Me.colc22.OptionsColumn.FixedWidth = True
         Me.colc22.Visible = True
-        Me.colc22.VisibleIndex = 19
+        Me.colc22.VisibleIndex = 12
         Me.colc22.Width = 90
         '
         'colc23
@@ -846,7 +826,7 @@ Partial Class MainForm
         Me.colc23.Name = "colc23"
         Me.colc23.OptionsColumn.FixedWidth = True
         Me.colc23.Visible = True
-        Me.colc23.VisibleIndex = 20
+        Me.colc23.VisibleIndex = 13
         Me.colc23.Width = 90
         '
         'StandaloneBarDockControl3
@@ -966,6 +946,12 @@ Partial Class MainForm
         Me.barDockControlRight.Manager = Me.bm
         Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4)
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 667)
+        '
+        'oCalcButton
+        '
+        Me.oCalcButton.Caption = "Calculate"
+        Me.oCalcButton.Id = 7
+        Me.oCalcButton.Name = "oCalcButton"
         '
         'oNav
         '
@@ -1401,11 +1387,6 @@ Partial Class MainForm
         Me.colc24.VisibleIndex = 1
         Me.colc24.Width = 120
         '
-        'bsSector
-        '
-        Me.bsSector.DataMember = "Sector"
-        Me.bsSector.DataSource = Me.ds
-        '
         's4
         '
         Me.ttc.SetAllowHtmlText(Me.s4, DevExpress.Utils.DefaultBoolean.[Default])
@@ -1522,6 +1503,11 @@ Partial Class MainForm
         Me.colid.Visible = True
         Me.colid.VisibleIndex = 0
         '
+        'bsSector
+        '
+        Me.bsSector.DataMember = "Sector"
+        Me.bsSector.DataSource = Me.ds
+        '
         'OfficeNavigationBar1
         '
         Me.OfficeNavigationBar1.AutoSizeInLayoutControl = True
@@ -1599,11 +1585,11 @@ Partial Class MainForm
         CType(Me.gco, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bsSector, System.ComponentModel.ISupportInitialize).EndInit()
         Me.s4.ResumeLayout(False)
         CType(Me.gce, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gve, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsSector, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OfficeNavigationBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

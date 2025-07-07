@@ -57,14 +57,16 @@ NotInheritable Class MainForm
 			Try
 				Dim dt As New DataTable
 				cn.Open()
+				'system config - c1 = name, c2 = value, eg look back length
+				'use c1 as PK, 
 				With cn.NewCommand("select c1,c2 from [Options]")
 					dt.Load(.ExecuteReader())
 				End With
 				dt.Constraints.Add("pk", dt.Columns("c1"), True)
-
+				'get the name of RAR sheet based on RAR lookback 
+				' vbCrLf = line break, dt.Rows.Find("RAR1")("c2") =look for c1 for "RAR1", then get c2 value for this Caption 
 				colF3.Caption = "RAR " & vbCrLf & dt.Rows.Find("RAR1")("c2")
 				colF4.Caption = "RAR " & vbCrLf & dt.Rows.Find("RAR2")("c2")
-
 				'colF5.Caption = "$ ATR[x]" & vbCrLf & dt.Rows.Find("ATR")("c2")
 			Catch ex As Exception
 			End Try
@@ -145,14 +147,6 @@ NotInheritable Class MainForm
 					ds.RAR.Load(.ExecuteReader())
 				End With
 
-				'For Each z As ods.RARRow In ds.RAR.Rows
-				'	z.F12 = z.F12 * 10
-				'Next
-
-				With cn.NewCommand("select * from Risk")
-					ds.Risk.Load(.ExecuteReader())
-				End With
-
 				With cn.NewCommand("select * from MktSpec")
 					ds.MktSpec.Load(.ExecuteReader())
 				End With
@@ -165,10 +159,6 @@ NotInheritable Class MainForm
 
 				With cn.NewCommand("select * from Options")
 					ds.Options.Load(.ExecuteReader())
-				End With
-
-				With cn.NewCommand("select * from Sector")
-					ds.Sector.Load(.ExecuteReader())
 				End With
 
 			Catch ex As Exception
@@ -187,33 +177,17 @@ NotInheritable Class MainForm
 
 	Private Sub _oRefreshAllButton_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles oRefreshAllButton.ItemClick
 		gvr.BeginDataUpdate()
-		'gvs.BeginDataUpdate()
+		'gvs.BeginDataUpdate() ' risk data
 		gvm.BeginDataUpdate()
 		gvi.BeginDataUpdate()
 		gve.BeginDataUpdate()
-		'gvt.BeginDataUpdate()
+		'gvt.BeginDataUpdate() ' sector data
 		gvo.BeginDataUpdate()
 		oRefreshAllButton.Enabled = False
 
 		bwRefresh.RunWorkerAsync()
 	End Sub
 
-	'Private Sub refreshColumnNames()
-	'	For Each r As ods.OptionsRow In ds.Options
-	'		If r.c1.ToLower().Equals("rar1") Then
-	'			colF9.Caption = "RAR" & vbCrLf & r.c2
-	'			colF9.Caption = "Rank" & vbCrLf & r.c2
-	'		ElseIf r.c1.ToLower().Equals("rar2") Then
-	'			colF10.Caption = "RAR" & vbCrLf & r.c2
-	'			colF10.Caption = "Rank" & vbCrLf & r.c2
-	'		ElseIf r.c1.ToLower().Equals("atr") Then
-	'			colF5.Caption = "$ ATR[x]" & vbCrLf & ""
-	'		Else
-
-	'		End If
-	'	Next
-
-	'End Sub
 	Private Sub bwRefresh_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwRefresh.RunWorkerCompleted
 		Dim em As String = e.Result(0)
 		gvr.EndDataUpdate()
@@ -248,6 +222,7 @@ NotInheritable Class MainForm
 
 		Using cn As New MsAccess
 			Try
+				'Dict in memory, delete when app closed
 				Dim lstFile As New Dictionary(Of String, ods.DataDataTable)
 
 				Me.Invoke(writeStatus, "Loading CSVs", "please wait…")
@@ -301,7 +276,7 @@ NotInheritable Class MainForm
 				Dim rRar As ods.RARRow = Nothing
 				Dim rmkt0 As ods.MktSpecRow = Nothing
 				Dim rmkt1 As ods.MktSpecRow = Nothing
-				Dim rRisk As ods.RiskRow = Nothing
+				'initialize temp data table for each loop
 				Dim r0 As ods.DataRow = Nothing
 				Dim r1 As ods.DataRow = Nothing
 
@@ -335,7 +310,7 @@ NotInheritable Class MainForm
 
 				x.Options.Load(cn.NewCommand("select * from options").ExecuteReader())
 
-				' get the options
+				' get the system seeting
 				With cn.NewCommand("select c1,c2 from [Options]")
 					x.Options.Load(.ExecuteReader())
 				End With
@@ -344,7 +319,9 @@ NotInheritable Class MainForm
 				Dim accountSize As Decimal = x.Options.Rows.Find(3)("c2")
 				Dim mmFactor As Decimal = x.Options.Rows.Find(4)("c2")
 				Dim slen As Int32 = x.Options.Rows.Find(1)("c2") ' B2
+				'long look back for entry
 				Dim llen As Int32 = x.Options.Rows.Find(2)("c2") ' B3
+				'short rar look back
 				Dim lbp As Decimal = x.Options.Rows.Find(5)("c2") ' C10
 				Dim sbp As Decimal = x.Options.Rows.Find(6)("c2") ' D10
 				Dim rar10_5 As Int32 = x.Options.Rows.Find(7)("c2") ' E10
@@ -362,6 +339,8 @@ NotInheritable Class MainForm
 				x.MktSpec.Load(cn.NewCommand("select * from MktSpec").ExecuteReader())
 				fileNo = 0
 				rmkt0 = Nothing
+				'loop each file in the directory to calculate info for RAR page
+				'read one file, do calculation, put in a row in RAR page (there will be another loop inside)
 				For Each f As String In Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly)
 					Me.Invoke(writeStatus, f, "Calculating, please wait…")
 					fileNo += 1
@@ -369,6 +348,7 @@ NotInheritable Class MainForm
 					mktName = fileName.Substring(0, 2)
 
 					For Each tmp As ods.MktSpecRow In x.MktSpec.Rows
+						'once find match exit for loop
 						If Len(tmp.c1) = 3 AndAlso tmp.c1.Substring(0, 3).Equals(fileName.Substring(0, 3)) Then
 							mktName = fileName.Substring(0, 3)
 							rmkt0 = tmp
@@ -391,171 +371,160 @@ NotInheritable Class MainForm
 					bmktcmi = rmkt0.c22
 					smktcmi = rmkt0.c23
 
-					rmkt0._slip = rmkt0.c9 / 2 * rmkt0.c5
+					'rmkt0._slip = rmkt0.c9 / 2 * rmkt0.c5
 
-
+					' if not traderble, skip for next market
 					If rmkt0.c18.ToLower() = "no" Then Continue For
 
-					rRisk = x.Risk.NewRow()
-					rRisk.rn = fileNo
-					rRisk.c1 = rmkt0.c2
-					rRisk.c4 = rmkt0.c20
-					rRisk.c9 = rmkt0.c7
-
+					' F2 and c2 = Market Name
 					rRar.F2 = rmkt0.c2
 
 					numd1 = 0
 					numd2 = 0
 
-					'Using csv As New FileIO.TextFieldParser(f) With {.Delimiters = {","}, .TextFieldType = FileIO.FieldType.Delimited, .TrimWhiteSpace = True}
-					'	'cn.NewCommand("delete from [data]").ExecuteNonQuery()
-					'	ocol = 0
-					'	While csv.LineNumber > 0
-					'		r0 = tmpData.NewRow()
-					'		ocol += 1
-					'		s = csv.ReadFields()
-					'		If ocol = 1 Then
-					'			Try
-					'				Dim u As ods.DataRow = tmpData.NewRow()
-					'				u.c1 = s(0)
-					'			Catch ex As Exception
-					'				tmpData.Rows.Add(r0)
-					'				Continue While
-					'			End Try
-					'		End If
-
-					'		r0.rn = ocol
-					'		For i As Int32 = 1 To 7 Step 1
-					'			r0("c" & i) = s(i - 1)
-					'		Next
-					'		tmpData.Rows.Add(r0)
-					'	End While
-					'End Using
+					'load the data to temp
 					tmpData = lstFile(fileName.ToLower())
 					ocol = tmpData.Rows.Count
 					maxRecord = ocol
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate LTTF P&L '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
+					' index start 0 and only update maxrecord - 1
+					If ocol > llen + 2 Then
 
-					' calculation begin
-					For ocol = slen + 1 To maxRecord Step 1
-						r0 = tmpData.Rows(ocol - 1)
-						r1 = tmpData.Rows(ocol - 2)
+						For ocol = slen + 1 To maxRecord Step 1
+							'r0 = single row of price data for cal
+							r0 = tmpData.Rows(ocol - 1)
+							'r1 = previous row's price data for cal
+							r1 = tmpData.Rows(ocol - 2)
 
-						'If ocol Mod 1000 = 0 Then e.Window.Message = String.Format(Path.GetFileName(f) & vbCrLf & "Performing calculation" & vbCrLf & "{0:n0} of {1:n0}" & vbCrLf & "Please wait…", ocol, maxRecord)
-						r0.c9 = tmpData.Compute("min(c4)", String.Format("rn >= {0} and rn <= {1}", ocol - slen + 1, ocol)) - rmkt0.c5
-						r0.c11 = tmpData.Compute("max(c3)", String.Format("rn >= {0} and rn <= {1}", ocol - slen + 1, ocol)) + rmkt0.c5
+							'{0} -> ocol-slen + 1, {1} -> ocol
+							r0.c9 = tmpData.Compute("min(c4)", String.Format("rn >= {0} and rn <= {1}", ocol - slen + 1, ocol)) - rmkt0.c5
+							r0.c11 = tmpData.Compute("max(c3)", String.Format("rn >= {0} and rn <= {1}", ocol - slen + 1, ocol)) + rmkt0.c5
 
 
-						If ocol >= llen + 1 Then
-							r0.c10 = tmpData.Compute("min(c4)", String.Format("rn >= {0} and rn <= {1}", ocol - llen + 1, ocol)) - rmkt0.c5
-							r0.c8 = tmpData.Compute("max(c3)", String.Format("rn >= {0} and rn <= {1}", ocol - llen + 1, ocol)) + rmkt0.c5
-							If ocol = llen + 1 Then r0.c15 = 0 ' initial p&l
+							If ocol >= llen + 1 Then
+								r0.c10 = tmpData.Compute("min(c4)", String.Format("rn >= {0} and rn <= {1}", ocol - llen + 1, ocol)) - rmkt0.c5
+								r0.c8 = tmpData.Compute("max(c3)", String.Format("rn >= {0} and rn <= {1}", ocol - llen + 1, ocol)) + rmkt0.c5
+								If ocol = llen + 1 Then r0.c15 = 0 ' initial p&l
 
-							If ocol >= llen + 2 Then
+								If ocol >= llen + 2 Then
 
-								If r1.c12 = 0 Then
-									If r0.c3 <> r0.c4 Then
-										If (r0.c3 >= r1.c8) AndAlso (r0.c4 > r1.c10) Then
-											r0.c12 = If(r0.c2 >= r1.c8, -r0.c2, -r1.c8)
+									If r1.c12 = 0 Then
+										If r0.c3 <> r0.c4 Then
+											If (r0.c3 >= r1.c8) AndAlso (r0.c4 > r1.c10) Then
+												r0.c12 = If(r0.c2 >= r1.c8, -r0.c2, -r1.c8)
 
-										ElseIf (r0.c4 <= r1.c10) AndAlso (r0.c3 < r1.c8) Then
-											r0.c12 = If(r0.c2 <= r1.c10, r0.c2, r1.c10)
+											ElseIf (r0.c4 <= r1.c10) AndAlso (r0.c3 < r1.c8) Then
+												r0.c12 = If(r0.c2 <= r1.c10, r0.c2, r1.c10)
 
-										ElseIf (r0.c3 >= r1.c8) AndAlso (r0.c4 <= r1.c10) Then
-											If r0.c2 >= r0.c5 Then
-												r0.c13 = If(r0.c2 >= r1.c8, -r0.c2 + r0.c9, -r1.c8 + r0.c9)
-												r0.c12 = r1.c10
-											Else
-												r0.c13 = If(r0.c2 <= r1.c10, r0.c2 - r0.c11, r1.c10 - r0.c11)
-												r0.c12 = r1.c8
+											ElseIf (r0.c3 >= r1.c8) AndAlso (r0.c4 <= r1.c10) Then
+												If r0.c2 >= r0.c5 Then
+													r0.c13 = If(r0.c2 >= r1.c8, -r0.c2 + r0.c9, -r1.c8 + r0.c9)
+													r0.c12 = r1.c10
+												Else
+													r0.c13 = If(r0.c2 <= r1.c10, r0.c2 - r0.c11, r1.c10 - r0.c11)
+													r0.c12 = r1.c8
+												End If
 											End If
 										End If
-									End If
 
-								ElseIf r1.c12 < 0 Then
-									If r0.c3 <> r0.c4 Then
-										If (r0.c4 <= r1.c10) AndAlso (r0.c4 <= r1.c9) Then
-											r0.c13 = -r1.c5 + If(r0.c2 <= r1.c9, r0.c2, r1.c9)
-											r0.c12 = If(r0.c2 <= r1.c10, r0.c2, r1.c10)
+									ElseIf r1.c12 < 0 Then
+										If r0.c3 <> r0.c4 Then
+											If (r0.c4 <= r1.c10) AndAlso (r0.c4 <= r1.c9) Then
+												r0.c13 = -r1.c5 + If(r0.c2 <= r1.c9, r0.c2, r1.c9)
+												r0.c12 = If(r0.c2 <= r1.c10, r0.c2, r1.c10)
 
-										ElseIf (r0.c4 <= r1.c9) AndAlso (r0.c4 > r1.c10) Then
-											r0.c13 = -r1.c5 + If(r0.c2 <= r1.c9, r0.c2, r1.c9)
+											ElseIf (r0.c4 <= r1.c9) AndAlso (r0.c4 > r1.c10) Then
+												r0.c13 = -r1.c5 + If(r0.c2 <= r1.c9, r0.c2, r1.c9)
 
+											Else
+												r0.c12 = r1.c12
+											End If
 										Else
 											r0.c12 = r1.c12
 										End If
-									Else
-										r0.c12 = r1.c12
-									End If
 
-								ElseIf r1.c12 > 0 Then
-									If r0.c3 <> r0.c4 Then
-										If r0.c3 >= r1.c8 AndAlso r0.c3 >= r1.c11 Then
-											r0.c13 = r1.c5 - If(r0.c2 >= r1.c11, r0.c2, r1.c11)
-											r0.c12 = If(r0.c2 >= r1.c8, -r0.c2, -r1.c8)
+									ElseIf r1.c12 > 0 Then
+										If r0.c3 <> r0.c4 Then
+											If r0.c3 >= r1.c8 AndAlso r0.c3 >= r1.c11 Then
+												r0.c13 = r1.c5 - If(r0.c2 >= r1.c11, r0.c2, r1.c11)
+												r0.c12 = If(r0.c2 >= r1.c8, -r0.c2, -r1.c8)
 
-										ElseIf r0.c3 >= r1.c11 AndAlso r0.c3 < r1.c8 Then
-											r0.c13 = r1.c5 - If(r0.c2 >= r1.c11, r0.c2, r1.c11)
+											ElseIf r0.c3 >= r1.c11 AndAlso r0.c3 < r1.c8 Then
+												r0.c13 = r1.c5 - If(r0.c2 >= r1.c11, r0.c2, r1.c11)
 
+											Else
+												r0.c12 = r1.c12
+											End If
 										Else
 											r0.c12 = r1.c12
 										End If
-									Else
-										r0.c12 = r1.c12
+									End If
+
+									' profit and loss
+									If (r0.c12 = 0) AndAlso (r0.c13 = 0) Then
+										r0.c14 = 0
+
+									ElseIf (r0.c12 = 0) AndAlso (r0.c13 <> 0) Then
+										' close trade
+										r0.c14 = (r0.c13) * rmkt0.c4
+
+									ElseIf r0.c12 < 0 Then
+										If r0.c12 <> r1.c12 Then
+											'first date in the trade
+											If r0.c13 = 0 Then
+												r0.c14 = (r0.c12 + r0.c5) * rmkt0.c4
+											Else
+												r0.c14 = (r0.c12 + r0.c5 + r0.c13) * rmkt0.c4
+											End If
+										Else
+											r0.c14 = (r0.c5 - r1.c5) * rmkt0.c4
+										End If
+
+									ElseIf r0.c12 > 0 Then
+										If r0.c12 <> r1.c12 Then
+											'first date in the trade
+											If r0.c13 = 0 Then
+												r0.c14 = (r0.c12 - r0.c5) * rmkt0.c4
+											Else
+												r0.c14 = (r0.c12 - r0.c5 + r0.c13) * rmkt0.c4
+											End If
+										Else
+											r0.c14 = (-r0.c5 + r1.c5) * rmkt0.c4
+										End If
 									End If
 								End If
 
-								' profit and loss
-								If (r0.c12 = 0) AndAlso (r0.c13 = 0) Then
-									r0.c14 = 0
-
-								ElseIf (r0.c12 = 0) AndAlso (r0.c13 <> 0) Then
-									' close trade
-									r0.c14 = (r0.c13 - rmkt0._slip) * rmkt0.c4
-
-								ElseIf r0.c12 < 0 Then
-									If r0.c12 <> r1.c12 Then
-										'first date in the trade
-										If r0.c13 = 0 Then
-											r0.c14 = (r0.c12 + r0.c5 - rmkt0._slip) * rmkt0.c4 - rmkt0.c11
-										Else
-											r0.c14 = (r0.c12 + r0.c5 + r0.c13 - 2 * rmkt0._slip) * rmkt0.c4 - rmkt0.c11
-										End If
-									Else
-										r0.c14 = (r0.c5 - r1.c5) * rmkt0.c4
-									End If
-
-								ElseIf r0.c12 > 0 Then
-									If r0.c12 <> r1.c12 Then
-										'first date in the trade
-										If r0.c13 = 0 Then
-											r0.c14 = (r0.c12 - r0.c5 - rmkt0._slip) * rmkt0.c4 - rmkt0.c11
-										Else
-											r0.c14 = (r0.c12 - r0.c5 + r0.c13 - 2 * rmkt0._slip) * rmkt0.c4 - rmkt0.c11
-										End If
-									Else
-										r0.c14 = (-r0.c5 + r1.c5) * rmkt0.c4
-									End If
-								End If
+								r0.c15 = r1.c15 + r0.c14
 							End If
-
-							r0.c15 = r1.c15 + r0.c14
-						End If
-					Next
+						Next
+					End If
+					''''''end of reading the price data 
+					'''after loop, ocol = # of data +1 ???
 					'e.Window.Message = String.Format(Path.GetFileName(f) & vbCrLf & "Performing additional calculation" & vbCrLf & vbCrLf & "Please wait…", ocol, maxRecord)
 					Me.Invoke(writeStatus, f, "Performing additional calculation, please wait…")
 
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate ATR[x] '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
 					Dim loop_var As Int32 = 0
 					Dim ATR_VAR As Int32 = 0
-
-					If mci Then
-						loop_var = 410
-						ATR_VAR = 10
-					Else
+					'Calculate ATR[x]
+					If mci Then 'always true
+						loop_var = If(410 > ocol - 2, ocol - 2, 410)
 						ATR_VAR = If(rar10_5 < 1, 1, rar10_5)
-						loop_var = If(410 < ATR_VAR, ATR_VAR + 10, 410)
+					Else
+						ATR_VAR = 1
+						loop_var = 1
 					End If
 
 					For z As Int32 = 1 To loop_var Step 1
+						'today's row alwas always use previous data's data
 						r0 = tmpData.Rows(ocol - z - 1)
 						r1 = tmpData.Rows(ocol - z - 1 - 1)
 
@@ -564,39 +533,62 @@ NotInheritable Class MainForm
 						r0.c19 = r0.c17 - r0.c18
 					Next
 
-
-					r0 = tmpData.Rows(ocol - 1 - 1)
+					'ATR with ATR_VAR look back length for current date ocol
+					'r0 = tmpData.Rows(ocol - 1 - 1)
+					' ATR[x], x = rar10_5
 					r0.c20 = tmpData.Compute("avg(c19)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - ATR_VAR))
+					'$ATR[x]
 					rRar.F5 = r0.c20 * rmkt0.c4
 
-					' store mkt1atr & mkt1pc value
-					For z1 As Int32 = 1 To 300 Step 1
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate mkt1 CMI '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
+					' store mkt1atr & mkt1pc value in an 300 array
+					Dim cmi_lb As Int32 = 0
+					cmi_lb = If(300 > ocol - 3, ocol - 3, 300)
+
+					For z1 As Int32 = 1 To cmi_lb Step 1
 						r0 = tmpData.Rows(ocol - z1 - 1)
+						'price change is 2 days price change
 						r1 = tmpData.Rows(ocol - z1 - 3)
+
+						' ATR[100] for last 300 days
 						r0.c21 = tmpData.Compute("avg(c19)", String.Format("rn <= {0} and rn >= {1}", ocol - z1 - 1, ocol - z1 - 100))
-
+						' today's range  > ATR[100] , 1 else 0
 						mkt1atr(z1) = If(r0.c19 > r0.c21, 1, 0)
+						' price change
 						mkt1pc(z1) = r0.c5 - r1.c5
+						' date
 						mkt1dt(z1) = r0.c1
-
-						'mkt2atr(z1) = If(r0.c19 > r0.c21, 1, 0)
-						'mkt2pc(z1) = r0.c5 - r1.c5
-						'mkt2dt(z1) = r0.c1
 					Next
-
+					'r0, check when to recall r0
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate MM Risk using long lb & short lb '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
 					r0 = tmpData.Rows(ocol - 1 - 1)
-
-
-					maxl = (tmpData.Compute("max(c3)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - llen)) + rmkt0.c5)
-					minl = (tmpData.Compute("min(c4)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - llen)) - rmkt0.c5)
-					maxs = (tmpData.Compute("max(c3)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - slen + 1)) + rmkt0.c5)
-					mins = (tmpData.Compute("min(c4)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - slen + 1)) - rmkt0.c5)
+					Dim entry_lb As Int32 = 0
+					Dim exit_lb As Int32 = 0
+					entry_lb = If(llen > ocol - 1, ocol - 1, llen)
+					exit_lb = If(slen > ocol - 1, ocol - 1, slen)
+					maxl = (tmpData.Compute("max(c3)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - entry_lb)) + rmkt0.c5)
+					minl = (tmpData.Compute("min(c4)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - entry_lb)) - rmkt0.c5)
+					maxs = (tmpData.Compute("max(c3)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - exit_lb + 1)) + rmkt0.c5)
+					mins = (tmpData.Compute("min(c4)", String.Format("rn <= {0} and rn >= {1}", ocol - 1, ocol - exit_lb + 1)) - rmkt0.c5)
 					cl = r0.c5
-
+					'long MM Risk
 					rRar.F6 = rmkt0.c4 * (maxl - mins)
+					'Short MM Risk
 					rRar.F7 = rmkt0.c4 * (maxs - minl)
-					rRar.F8 = r0.c1
-
+					rRar.F8 = r0.c1 'date
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate short RAR '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
 					numd1 = 0
 					numd2 = 0
 					If ((ocol - 1) > (llen + 2 + lbp)) AndAlso (lbp > 0) Then
@@ -617,9 +609,13 @@ NotInheritable Class MainForm
 							rRar.F3 = If(r > 0, r / sd, r * sd)
 						End If
 					Else
-						rRar.F3 = 0
+						rRar.F3 = Double.NaN
 					End If
-
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate long RAR '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
 					If ((ocol - 1) > (llen + 2 + sbp)) AndAlso (sbp > 0) Then
 						For sy = (ocol - sbp - 1) To ocol - 1 Step 1
 							r0 = tmpData.Rows(sy - 1)
@@ -639,29 +635,21 @@ NotInheritable Class MainForm
 							rRar.F4 = If(r > 0, r / sd, r * sd)
 						End If
 					Else
-						rRar.F4 = 0
+						rRar.F4 = Double.NaN
 					End If
 
-
+					'if no B or S position
 					If Not rmkt0.c19.Equals("") Then
 						' color the data
 						rRar._color = 1 ' Color.FromArgb(200, 160, 35).ToArgb()
 
-						rRisk.c2 = rRar.F5
-						If rmkt0.c19.ToLower().StartsWith("b") Then
-							rRisk.c3 = rmkt0.c4 * (cl - mins + rmkt0.c5)
-						Else
-							rRisk.c3 = rmkt0.c4 * (maxs - cl - rmkt0.c5)
-						End If
-						rRisk.c4 = rmkt0.c20
-						rRisk.c5 = rRisk.c2 * rmkt0.c20
-						rRisk.c6 = rRisk.c5 / accountSize
-						rRisk.c7 = rRisk.c3 * rmkt0.c20
-						rRisk.c8 = rRisk.c7 / accountSize
-						x.Risk.Rows.Add(rRisk)
 					End If
 
-
+					'''''''''''''''''''''''''''''''''
+					'''
+					'''''''calculate 2nd MarketCMI '''''''
+					'''
+					'''''''''''''''''''''''''''''''''
 
 					If mci Then
 						Me.Invoke(writeStatus, f, "Calculating MCI, please wait…")
@@ -695,31 +683,6 @@ NotInheritable Class MainForm
 								Next
 								If Not ff Then Continue For
 
-
-								'Using csv As New FileIO.TextFieldParser(fx) With {.Delimiters = {","}, .TextFieldType = FileIO.FieldType.Delimited, .TrimWhiteSpace = True}
-								'	'cn.NewCommand("delete from [data]").ExecuteNonQuery()
-								'	ocol2 = 0
-								'	While csv.LineNumber > 0
-								'		rx0 = mciData.NewRow()
-								'		ocol2 += 1
-								'		s = csv.ReadFields()
-								'		If ocol2 = 1 Then
-								'			Try
-								'				Dim u As ods.DataRow = mciData.NewRow()
-								'				u.c1 = s(0)
-								'			Catch ex As Exception
-								'				mciData.Rows.Add(rx0)
-								'				Continue While
-								'			End Try
-								'		End If
-
-								'		rx0.rn = ocol2
-								'		For i As Int32 = 1 To 7 Step 1
-								'			rx0("c" & i) = s(i - 1)
-								'		Next
-								'		mciData.Rows.Add(rx0)
-								'	End While
-								'End Using
 								Me.Invoke(writeStatus, f, "Calculating " & Path.GetFileName(fx) & ", please wait…")
 								mciData = lstFile(Path.GetFileName(fx).ToLower())
 								ocol2 = mciData.Rows.Count
@@ -841,62 +804,11 @@ NotInheritable Class MainForm
 					rRar.F13 = accountSize * mmFactor / rRar.F5 * rRar.F12
 
 
-
-
-					'For Each tmp As ods.MktSpecRow In x.MktSpec.Rows
-					'	If Len(tmp.c1) = 3 AndAlso tmp.c1.Substring(0, 3).Equals(rRar.F1.Substring(0, 3)) Then
-					'		tmp.c20 = rRar.F13
-					'		tmp.c21 = rRar.F12
-					'		Exit For
-					'	ElseIf Len(tmp.c1) = 2 AndAlso tmp.c1.Substring(0, 2).Equals(rRar.F1.Substring(0, 2)) Then
-					'		tmp.c20 = rRar.F13
-					'		tmp.c21 = rRar.F12
-					'		Exit For
-					'	End If
-					'Next
 				Next
 
 
-				'				Using sw As New StringWriter
-				'					For Each rda As ods.DataRow In tmpData.Rows
-				'						For Each c As DataColumn In tmpData.Columns
-				'							If c.ColumnName.StartsWith("_") Then Continue For
-				'							If c.ColumnName.StartsWith("rn") Then Continue For
-
-				'							sw.Write(rda(c) & ",")
-				'						Next
-				'						sw.WriteLine()
-				'					Next
-
-				''#If DEBUG Then
-				''					File.WriteAllText("d:\test.csv", sw.ToString())
-				''#End If
-				'				End Using
-
-
-
-
-				'' saving to database
-				cn.NewCommand("delete from [risk]").ExecuteNonQuery()
+				'' saving to database (rar table)
 				cn.NewCommand("delete from [rar]").ExecuteNonQuery()
-				cn.NewCommand("delete from [sector]").ExecuteNonQuery()
-
-
-				'Dim cmMktUpdate2 As OleDbCommand = cn.NewCommand("update [mktspec] set c20 =?, c21=? where rn=?")
-				'With cmMktUpdate2.Parameters
-				'	.Add("@c22", OleDbType.Double)
-				'	.Add("@c23", OleDbType.Double)
-				'	.Add("@rn", OleDbType.Integer)
-				'End With
-
-				'For Each umkt As ods.MktSpecRow In ds.MktSpec.Rows
-				'	With cmMktUpdate2.Parameters
-				'		.Item("@c22").Value = umkt.c22
-				'		.Item("@c23").Value = umkt.c23
-				'		.Item("@rn").Value = umkt.c22
-				'	End With
-				'	cmMktUpdate2.ExecuteNonQuery()
-				'Next
 
 
 				Dim cmRarInsert As OleDbCommand = cn.NewCommand("insert into [rar] (rn,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,_color) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
@@ -924,6 +836,7 @@ NotInheritable Class MainForm
 					fileNo += 1
 
 					With cmRarInsert.Parameters
+						'if MktSpec is NOT found then only inset f1 & rn, other empty 
 						If rRar.F2.Equals("") Then
 							For Each c As DataColumn In ds.RAR.Columns
 								If c.ColumnName.ToLower().Equals("f1") Then
@@ -936,6 +849,7 @@ NotInheritable Class MainForm
 							Next
 
 						Else
+							' if MktSpec is found, inset all 
 							For Each c As DataColumn In ds.RAR.Columns
 								.Item("@" & c.ColumnName).Value = rRar(c.ColumnName)
 							Next
@@ -944,70 +858,6 @@ NotInheritable Class MainForm
 					cmRarInsert.ExecuteNonQuery()
 				Next
 
-				Dim cmRiskInsert As OleDbCommand = cn.NewCommand("insert into [Risk] (rn,c1,c2,c3,c4,c5,c6,c7,c8,c9) values (?,?,?,?,?,?,?,?,?,?)")
-				With cmRiskInsert.Parameters
-					.Add("@rn", OleDbType.Integer)
-					.Add("@c1", OleDbType.VarChar, 250)
-					For i As Int32 = 2 To 8 Step 1
-						.Add("@c" & i, OleDbType.Double)
-					Next
-					.Add("@c9", OleDbType.VarChar, 250)
-				End With
-				cmRiskInsert.Prepare()
-				For Each rRisk In x.Risk.Rows
-					With cmRiskInsert.Parameters
-						For Each c As DataColumn In ds.Risk.Columns
-							If c.ColumnName.StartsWith("_total") Then Continue For
-							.Item("@" & c.ColumnName).Value = rRisk(c.ColumnName)
-						Next
-					End With
-					cmRiskInsert.ExecuteNonQuery()
-				Next
-
-
-				Dim cmSectorInsert As OleDbCommand = cn.NewCommand("insert into [sector] (rn, c1, c2) values (?,?,?)")
-				With cmSectorInsert.Parameters
-					.Add("@rn", OleDbType.Integer)
-					.Add("@c1", OleDbType.VarChar, 250)
-					.Add("@c2", OleDbType.Double)
-				End With
-
-
-				Dim sect As New Dictionary(Of String, Double)
-				sect.Add("Stock", 0)
-				sect.Add("IR", 0)
-				sect.Add("Currency", 0)
-				sect.Add("Grain", 0)
-				sect.Add("Meat", 0)
-				sect.Add("Metal", 0)
-				sect.Add("Soft", 0)
-				sect.Add("Energy", 0)
-				sect.Add("Others", 0)
-				Dim mkts As String = ""
-				For Each rRisk In x.Risk.Rows
-					mkts = rRisk.c9.ToLower()
-					If mkts.StartsWith("stock") Then : sect("Stock") += rRisk.c8
-					ElseIf mkts.StartsWith("ir") Then : sect("IR") += rRisk.c8
-					ElseIf mkts.StartsWith("currenc") Then : sect("Currency") += rRisk.c8
-					ElseIf mkts.StartsWith("grain") Then : sect("Grain") += rRisk.c8
-					ElseIf mkts.StartsWith("meat") Then : sect("Meat") += rRisk.c8
-					ElseIf mkts.StartsWith("metal") Then : sect("Metal") += rRisk.c8
-					ElseIf mkts.StartsWith("soft") Then : sect("Soft") += rRisk.c8
-					ElseIf mkts.StartsWith("energ") Then : sect("Energy") += rRisk.c8
-					ElseIf mkts.StartsWith("other") Then : sect("Others") += rRisk.c8
-					End If
-				Next
-
-				fileNo = 0
-				For Each z As KeyValuePair(Of String, Double) In sect
-					fileNo += 1
-					With cmSectorInsert.Parameters
-						.Item("@rn").Value = fileNo
-						.Item("@c1").Value = z.Key
-						.Item("@c2").Value = z.Value
-					End With
-					cmSectorInsert.ExecuteNonQuery()
-				Next
 
 			Catch ex As Exception
 				em = ex.Message
@@ -1147,7 +997,7 @@ NotInheritable Class MainForm
 
 	Private Sub _bwWeb_DoWork(sender As Object, e As DoWorkEventArgs) Handles bwWeb.DoWork
 		Dim em As String = ""
-
+		Dim webem As String = ""
 		Using cn As New MsAccess
 			Try
 				'WWSetCaption("IndexMundi")
@@ -1171,98 +1021,114 @@ NotInheritable Class MainForm
 				cmc.Parameters.Add("@a", OleDbType.VarChar, 3)
 				cmc.Prepare()
 
-				cn.NewCommand("delete from [IndexMundi]").ExecuteNonQuery()
-
 				Dim html As String = ""
 				Dim ws As HttpWebResponse = Nothing
-				Dim wr As HttpWebRequest = HttpWebRequest.Create("http://www.indexmundi.com/xrates/table.aspx")
+				Dim wr As HttpWebRequest = Nothing
+
 				Dim data As String = ""
 				Dim lst As New List(Of String)
-				wr.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0"
-				wr.Method = "GET"
-				ws = wr.GetResponse()
-				html = New StreamReader(ws.GetResponseStream()).ReadToEnd()
-				Me.Invoke(writeStatus, "IndexMundi", "Parsing, please wait…")
+				Try
+					wr = HttpWebRequest.Create("http://www.indexmundi.com/xrates/table.aspx")
+					wr.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0"
+					wr.Method = "GET"
+					ws = wr.GetResponse()
+					html = New StreamReader(ws.GetResponseStream()).ReadToEnd()
+					Me.Invoke(writeStatus, "IndexMundi", "Parsing, please wait…")
+					' Only clear the table if we successfully got the data
+					cn.NewCommand("delete from [IndexMundi]").ExecuteNonQuery()
+					data = "<tr>" & Regex.Match(html, "(?<=</tr><tr>)(.*?)</table>", RegexOptions.IgnoreCase Or RegexOptions.Singleline).Value
 
-				data = "<tr>" & Regex.Match(html, "(?<=</tr><tr>)(.*?)</table>", RegexOptions.IgnoreCase Or RegexOptions.Singleline).Value
-				'' parsing rows
-				For Each m As Match In Regex.Matches(data, "(?<=<tr(.*?)>)(.*?)</tr>", RegexOptions.IgnoreCase Or RegexOptions.Singleline)
-					lst.Clear()
+					'' parsing rows
+					For Each m As Match In Regex.Matches(data, "(?<=<tr(.*?)>)(.*?)</tr>", RegexOptions.IgnoreCase Or RegexOptions.Singleline)
+						lst.Clear()
 
-					For Each x As Match In Regex.Matches(m.Value, "(?<=>)[^<]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
-						If clearText(x.Value).Equals("") Then Continue For
-						lst.Add(clearText(x.Value))
+						For Each x As Match In Regex.Matches(m.Value, "(?<=>)[^<]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
+							If clearText(x.Value).Equals("") Then Continue For
+							lst.Add(clearText(x.Value))
+						Next
+
+						cmc.Parameters("@a").Value = Regex.Match(lst(2), "(?<=\()[^)]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase).Value
+						If cmc.ExecuteScalar() = 0 Then
+
+							With cm.Parameters
+								.Item("@a").Value = Regex.Match(lst(2), "(?<=\()[^)]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase).Value
+								.Item("@b").Value = DateTime.Parse(lst(0))
+								.Item("@c").Value = lst(1)
+								.Item("@d").Value = lst(2)
+								.Item("@e").Value = lst(3)
+								.Item("@f").Value = lst(5)
+							End With
+							cm.ExecuteNonQuery()
+						End If
 					Next
-
-					cmc.Parameters("@a").Value = Regex.Match(lst(2), "(?<=\()[^)]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase).Value
-					If cmc.ExecuteScalar() = 0 Then
-
-						With cm.Parameters
-							.Item("@a").Value = Regex.Match(lst(2), "(?<=\()[^)]*", RegexOptions.Singleline Or RegexOptions.IgnoreCase).Value
-							.Item("@b").Value = DateTime.Parse(lst(0))
-							.Item("@c").Value = lst(1)
-							.Item("@d").Value = lst(2)
-							.Item("@e").Value = lst(3)
-							.Item("@f").Value = lst(5)
-						End With
-						cm.ExecuteNonQuery()
-					End If
-				Next
-
+				Catch ex As Exception
+					' If IndexMundi fails, continue without updating
+					webem = "IndexMundi data not updated: " & ex.Message
+					Me.Invoke(Sub() XtraMessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
+				End Try
+				' update ExchangeRate page
 				'	WWSetCaption("ExchangeRate")
 				Me.Invoke(writeStatus, "ExchangeRate", "Downloading, please wait…")
-
-				cm = cn.NewCommand("insert into [ExchangeRate] (id,xCurrency,xDat0,xDat1,xChange,xCountry) values (?,?,?,?,?,?)")
-				cn.Open()
-				With cm.Parameters
-					.Add("@a", OleDbType.VarChar, 3)
-					.Add("@c", OleDbType.VarChar, 30)
-					.Add("@d", OleDbType.Currency)
-					.Add("@e", OleDbType.Currency)
-					With .Add("@f", OleDbType.Decimal)
-						.Size = 9
-						.Scale = 4
+				Try
+					cm = cn.NewCommand("insert into [ExchangeRate] (id,xCurrency,xDat0,xDat1,xChange,xCountry) values (?,?,?,?,?,?)")
+					cn.Open()
+					With cm.Parameters
+						.Add("@a", OleDbType.VarChar, 3)
+						.Add("@c", OleDbType.VarChar, 30)
+						.Add("@d", OleDbType.Currency)
+						.Add("@e", OleDbType.Currency)
+						With .Add("@f", OleDbType.Decimal)
+							.Size = 9
+							.Scale = 4
+						End With
+						.Add("@g", OleDbType.VarChar, 250)
 					End With
-					.Add("@g", OleDbType.VarChar, 250)
-				End With
-				cm.Prepare()
+					cm.Prepare()
 
-				cmc = cn.NewCommand("select count(*) from [ExchangeRate] where id = ?")
-				cmc.Parameters.Add("@a", OleDbType.VarChar, 3)
-				cmc.Prepare()
-
-				cn.NewCommand("delete from ExchangeRate").ExecuteNonQuery()
+					cmc = cn.NewCommand("select count(*) from [ExchangeRate] where id = ?")
+					cmc.Parameters.Add("@a", OleDbType.VarChar, 3)
+					cmc.Prepare()
+					' Only delete existing data if we're going to successfully get new data
+					Dim exchangeRateUpdated As Boolean = False
 
 
-				wr = HttpWebRequest.Create("http://www.exchangerate.com/")
-				lst = New List(Of String)
+					wr = HttpWebRequest.Create("http://www.exchangerate.com/")
+					lst = New List(Of String)
 
-				wr.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0"
-				wr.Method = "GET"
-				ws = wr.GetResponse()
-				html = New StreamReader(ws.GetResponseStream()).ReadToEnd()
-				Me.Invoke(writeStatus, "ExchangeRate", "Parsing, please wait…")
+					wr.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0"
+					wr.Method = "GET"
+					ws = wr.GetResponse()
+					html = New StreamReader(ws.GetResponseStream()).ReadToEnd()
+					Me.Invoke(writeStatus, "ExchangeRate", "Parsing, please wait…")
+					' Only clear the table if we successfully got the data
+					cn.NewCommand("delete from ExchangeRate").ExecuteNonQuery()
+					exchangeRateUpdated = True
 
-				data = Regex.Match(html, "(?<=xml version)(.*?)GMT\)", RegexOptions.IgnoreCase Or RegexOptions.Singleline).Value
-				'' parsing rows
-				For Each m As Match In Regex.Matches(data, "(?<=country-flags)(.*?)</TD></TR>", RegexOptions.IgnoreCase Or RegexOptions.Singleline)
-					lst.Clear()
-					For Each x As Match In Regex.Matches(m.Value, "(?<=<td)(.*?)</td>", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
-						If clearText(x.Value).Equals("") Then Continue For
-						lst.Add(stripHtml("<td" & x.Value))
+					data = Regex.Match(html, "(?<=xml version)(.*?)GMT\)", RegexOptions.IgnoreCase Or RegexOptions.Singleline).Value
+					'' parsing rows
+					For Each m As Match In Regex.Matches(data, "(?<=country-flags)(.*?)</TD></TR>", RegexOptions.IgnoreCase Or RegexOptions.Singleline)
+						lst.Clear()
+						For Each x As Match In Regex.Matches(m.Value, "(?<=<td)(.*?)</td>", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
+							If clearText(x.Value).Equals("") Then Continue For
+							lst.Add(stripHtml("<td" & x.Value))
+						Next
+
+						cmc.Parameters("@a").Value = lst(2)
+						If cmc.ExecuteScalar() = 0 Then
+							cm.Parameters("@a").Value = lst(2)
+							cm.Parameters("@d").Value = lst(3)
+							cm.Parameters("@e").Value = lst(4)
+							cm.Parameters("@c").Value = lst(1)
+							cm.Parameters("@f").Value = lst(5).Replace("%", "")
+							cm.Parameters("@g").Value = lst(0)
+							cm.ExecuteNonQuery()
+						End If
 					Next
-
-					cmc.Parameters("@a").Value = lst(2)
-					If cmc.ExecuteScalar() = 0 Then
-						cm.Parameters("@a").Value = lst(2)
-						cm.Parameters("@d").Value = lst(3)
-						cm.Parameters("@e").Value = lst(4)
-						cm.Parameters("@c").Value = lst(1)
-						cm.Parameters("@f").Value = lst(5).Replace("%", "")
-						cm.Parameters("@g").Value = lst(0)
-						cm.ExecuteNonQuery()
-					End If
-				Next
+				Catch ex As Exception
+					' If exchange rate fails, continue without updating
+					webem = "Exchange rate data not updated: " & ex.Message
+					Me.Invoke(Sub() XtraMessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
+				End Try
 			Catch ex As Exception
 				em = ex.Message
 			Finally
@@ -1310,6 +1176,7 @@ NotInheritable Class MainForm
 				For Each rmkt In x.MktSpec.Rows
 					rmkt._fnd = rmkt.c1.Substring(0, 2)
 					If rmkt.Isc10Null() Then rmkt.c10 = 0
+					'if USD, no need search for exchange rate
 					If Trim(rmkt.c12).Equals("") OrElse Trim(rmkt.c12).Equals("USD") Then
 						If Not rmkt.Isc3Null() Then
 							rmkt.c4 = rmkt.c3
@@ -1554,35 +1421,6 @@ NotInheritable Class MainForm
 		gvr.ExportToHtml(sfd.FileName)
 	End Sub
 
-	Private Sub _oRiskExport_PDF_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_PDF.ItemClick
-		sfd.Filter = save_pdf
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		'gvs.ExportToPdf(sfd.FileName)
-	End Sub
-
-	Private Sub _oRiskExport_Excel_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Excel.ItemClick
-		sfd.Filter = save_xls
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		'gvs.ExportToXlsx(sfd.FileName)
-	End Sub
-
-	Private Sub _oRiskExport_CSV_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_CSV.ItemClick
-		sfd.Filter = save_csv
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		'gvs.ExportToCsv(sfd.FileName)
-	End Sub
-
-
-	Sub _oRiskExport_Html_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Html.ItemClick
-		sfd.Filter = save_html
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		'gvs.ExportToHtml(sfd.FileName)
-	End Sub
-
 	Private Sub _oSetFolderButton_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oSetFolderButton.ItemClick
 		fbd.SelectedPath = src_dir
 		If fbd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
@@ -1756,71 +1594,3 @@ NotInheritable Class MainForm
 		Dim en As Boolean = (e.FocusedRowHandle >= 0)
 		oDeleteButton.Enabled = en
 	End Sub
-
-
-	'Private Sub refreshExchange(sender As Object, e As WaitWindowEventArgs)
-	'	Dim em As String = ""
-	'	Using cn As New MsAccess
-	'		Try
-	'			Dim cm As OleDbCommand = cn.NewCommand("insert into [ExchangeRate] (id,xCurrency,xDat0,xDat1,xChange,xCountry) values (?,?,?,?,?,?)")
-	'			cn.Open()
-	'			With cm.Parameters
-	'				.Add("@a", OleDbType.VarChar, 3)
-	'				.Add("@c", OleDbType.VarChar, 30)
-	'				.Add("@d", OleDbType.Currency)
-	'				.Add("@e", OleDbType.Currency)
-	'				With .Add("@f", OleDbType.Decimal)
-	'					.Size = 9
-	'					.Scale = 4
-	'				End With
-	'				.Add("@g", OleDbType.VarChar, 250)
-	'			End With
-	'			cm.Prepare()
-
-	'			Dim cmc As OleDbCommand = cn.NewCommand("select count(*) from [ExchangeRate] where id = ?")
-	'			cmc.Parameters.Add("@a", OleDbType.VarChar, 3)
-	'			cmc.Prepare()
-
-	'			cn.NewCommand("delete from ExchangeRate").ExecuteNonQuery()
-
-
-	'			Dim html As String = ""
-	'			Dim ws As HttpWebResponse = Nothing
-	'			Dim wr As HttpWebRequest = HttpWebRequest.Create("http://www.exchangerate.com/")
-	'			Dim data As String = ""
-	'			Dim lst As New List(Of String)
-
-	'			wr.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0"
-	'			wr.Method = "GET"
-	'			ws = wr.GetResponse()
-	'			html = New StreamReader(ws.GetResponseStream()).ReadToEnd()
-
-	'			data = Regex.Match(html, "(?<=xml version)(.*?)GMT\)", RegexOptions.IgnoreCase Or RegexOptions.Singleline).Value
-	'			'' parsing rows
-	'			For Each m As Match In Regex.Matches(data, "(?<=country-flags)(.*?)</TD></TR>", RegexOptions.IgnoreCase Or RegexOptions.Singleline)
-	'				lst.Clear()
-	'				For Each x As Match In Regex.Matches(m.Value, "(?<=<td)(.*?)</td>", RegexOptions.Singleline Or RegexOptions.IgnoreCase)
-	'					If clearText(x.Value).Equals("") Then Continue For
-	'					lst.Add(stripHtml("<td" & x.Value))
-	'				Next
-
-	'				cmc.Parameters("@a").Value = lst(2)
-	'				If cmc.ExecuteScalar() = 0 Then
-	'					cm.Parameters("@a").Value = lst(2)
-	'					cm.Parameters("@d").Value = lst(3)
-	'					cm.Parameters("@e").Value = lst(4)
-	'					cm.Parameters("@c").Value = lst(1)
-	'					cm.Parameters("@f").Value = lst(5).Replace("%", "")
-	'					cm.Parameters("@g").Value = lst(0)
-	'					cm.ExecuteNonQuery()
-	'				End If
-	'			Next
-	'		Catch ex As Exception
-	'			em = ex.Message
-	'		Finally
-	'			e.Result = {em}
-	'		End Try
-	'	End Using
-
-	'End Sub
-End Class
