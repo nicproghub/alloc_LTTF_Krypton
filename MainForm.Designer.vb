@@ -1,24 +1,26 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports DevExpress.Pdf.Native
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
-	Inherits DevExpress.XtraEditors.XtraForm
+    Inherits DevExpress.XtraEditors.XtraForm
 
-	'Form overrides dispose to clean up the component list.
-	<System.Diagnostics.DebuggerNonUserCode()>
-	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-		If disposing AndAlso components IsNot Nothing Then
-			components.Dispose()
-		End If
-		MyBase.Dispose(disposing)
-	End Sub
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        If disposing AndAlso components IsNot Nothing Then
+            components.Dispose()
+        End If
+        MyBase.Dispose(disposing)
+    End Sub
 
-	'Required by the Windows Form Designer
-	Private components As System.ComponentModel.IContainer
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
 
-	'NOTE: The following procedure is required by the Windows Form Designer
-	'It can be modified using the Windows Form Designer.  
-	'Do not modify it using the code editor.
-	<System.Diagnostics.DebuggerStepThrough()>
-	Private Sub InitializeComponent()
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
@@ -90,6 +92,7 @@ Partial Class MainForm
         Me.colc211 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc22 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc23 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.StandaloneBarDockControl3 = New DevExpress.XtraBars.StandaloneBarDockControl()
         Me.Bar8 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
@@ -235,8 +238,8 @@ Partial Class MainForm
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl5)
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl6)
         Me.bm.Form = Me
-        Me.bm.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.oRefreshAllButton, Me.oCalcButton, Me.oMktMciUpdateButton, Me.oStatus, Me.oExportButton, Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv, Me.oRarExport_Html, Me.BarSubItem1, Me.oRiskExport_PDF, Me.oRiskExport_Excel, Me.oRiskExport_CSV, Me.oRiskExport_Html, Me.oSetFolderButton, Me.oFolderLoc, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.oAddButton, Me.oDeleteButton, Me.SkinBarSubItem1, Me.BarEditItem1})
-        Me.bm.MaxItemId = 35
+        Me.bm.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.oRefreshAllButton, Me.oCalcButton, Me.oMktMciUpdateButton, Me.oStatus, Me.oExportButton, Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv, Me.oRarExport_Html, Me.BarSubItem1, Me.oRiskExport_PDF, Me.oRiskExport_Excel, Me.oRiskExport_CSV, Me.oRiskExport_Html, Me.oSetFolderButton, Me.oFolderLoc, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.oAddButton, Me.oDeleteButton, Me.SkinBarSubItem1, Me.BarEditItem1, Me.BarButtonItem1})
+        Me.bm.MaxItemId = 36
         Me.bm.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSearchControl1})
         Me.bm.StatusBar = Me.Bar3
         '
@@ -398,7 +401,7 @@ Partial Class MainForm
         Me.StandaloneBarDockControl5.Manager = Me.bm
         Me.StandaloneBarDockControl5.Margin = New System.Windows.Forms.Padding(4)
         Me.StandaloneBarDockControl5.Name = "StandaloneBarDockControl5"
-        Me.StandaloneBarDockControl5.Size = New System.Drawing.Size(1160, 42)
+        Me.StandaloneBarDockControl5.Size = New System.Drawing.Size(1157, 42)
         Me.StandaloneBarDockControl5.Text = "StandaloneBarDockControl5"
         '
         'Bar6
@@ -466,7 +469,7 @@ Partial Class MainForm
         Me.StandaloneBarDockControl2.Manager = Me.bm
         Me.StandaloneBarDockControl2.Margin = New System.Windows.Forms.Padding(4)
         Me.StandaloneBarDockControl2.Name = "StandaloneBarDockControl2"
-        Me.StandaloneBarDockControl2.Size = New System.Drawing.Size(1160, 42)
+        Me.StandaloneBarDockControl2.Size = New System.Drawing.Size(1157, 42)
         Me.StandaloneBarDockControl2.Text = "StandaloneBarDockControl2"
         '
         'Bar7
@@ -476,7 +479,7 @@ Partial Class MainForm
         Me.Bar7.DockRow = 0
         Me.Bar7.DockStyle = DevExpress.XtraBars.BarDockStyle.Standalone
         Me.Bar7.FloatLocation = New System.Drawing.Point(37, 213)
-        Me.Bar7.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oAddButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oDeleteButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarEditItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
+        Me.Bar7.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oAddButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oDeleteButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarEditItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
         Me.Bar7.OptionsBar.AllowQuickCustomization = False
         Me.Bar7.OptionsBar.DisableClose = True
         Me.Bar7.OptionsBar.DisableCustomization = True
@@ -538,7 +541,7 @@ Partial Class MainForm
         Me.gcm.Margin = New System.Windows.Forms.Padding(4)
         Me.gcm.MenuManager = Me.bm
         Me.gcm.Name = "gcm"
-        Me.gcm.Size = New System.Drawing.Size(1160, 570)
+        Me.gcm.Size = New System.Drawing.Size(1157, 373)
         Me.gcm.TabIndex = 2
         Me.gcm.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvm})
         '
@@ -617,7 +620,7 @@ Partial Class MainForm
         'colc41
         '
         Me.colc41.Caption = "Point Value $US"
-        Me.colc41.DisplayFormat.FormatString = "{0:n0}"
+        Me.colc41.DisplayFormat.FormatString = "n2"
         Me.colc41.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colc41.FieldName = "c4"
         Me.colc41.MinWidth = 112
@@ -829,6 +832,14 @@ Partial Class MainForm
         Me.colc23.VisibleIndex = 13
         Me.colc23.Width = 90
         '
+        'BarButtonItem1
+        '
+        Me.BarButtonItem1.Caption = "Update AllocWt"
+        Me.BarButtonItem1.Id = 35
+        Me.BarButtonItem1.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem1.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BarButtonItem1.Name = "BarButtonItem1"
+        '
         'StandaloneBarDockControl3
         '
         Me.StandaloneBarDockControl3.CausesValidation = False
@@ -837,7 +848,7 @@ Partial Class MainForm
         Me.StandaloneBarDockControl3.Manager = Me.bm
         Me.StandaloneBarDockControl3.Margin = New System.Windows.Forms.Padding(4)
         Me.StandaloneBarDockControl3.Name = "StandaloneBarDockControl3"
-        Me.StandaloneBarDockControl3.Size = New System.Drawing.Size(1160, 42)
+        Me.StandaloneBarDockControl3.Size = New System.Drawing.Size(1157, 42)
         Me.StandaloneBarDockControl3.Text = "StandaloneBarDockControl3"
         '
         'Bar8
@@ -873,7 +884,7 @@ Partial Class MainForm
         Me.StandaloneBarDockControl4.Manager = Me.bm
         Me.StandaloneBarDockControl4.Margin = New System.Windows.Forms.Padding(4)
         Me.StandaloneBarDockControl4.Name = "StandaloneBarDockControl4"
-        Me.StandaloneBarDockControl4.Size = New System.Drawing.Size(1160, 42)
+        Me.StandaloneBarDockControl4.Size = New System.Drawing.Size(1157, 42)
         Me.StandaloneBarDockControl4.Text = "StandaloneBarDockControl4"
         '
         'Bar9
@@ -908,7 +919,7 @@ Partial Class MainForm
         Me.StandaloneBarDockControl6.Manager = Me.bm
         Me.StandaloneBarDockControl6.Margin = New System.Windows.Forms.Padding(4)
         Me.StandaloneBarDockControl6.Name = "StandaloneBarDockControl6"
-        Me.StandaloneBarDockControl6.Size = New System.Drawing.Size(1160, 42)
+        Me.StandaloneBarDockControl6.Size = New System.Drawing.Size(1157, 42)
         Me.StandaloneBarDockControl6.Text = "StandaloneBarDockControl6"
         '
         'barDockControlTop
@@ -918,16 +929,16 @@ Partial Class MainForm
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.bm
         Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(4)
-        Me.barDockControlTop.Size = New System.Drawing.Size(1160, 41)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1157, 41)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 708)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 511)
         Me.barDockControlBottom.Manager = Me.bm
         Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(4)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1160, 34)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1157, 34)
         '
         'barDockControlLeft
         '
@@ -936,16 +947,16 @@ Partial Class MainForm
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 41)
         Me.barDockControlLeft.Manager = Me.bm
         Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(4)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 667)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 470)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1160, 41)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1157, 41)
         Me.barDockControlRight.Manager = Me.bm
         Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(4)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 667)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 470)
         '
         'oCalcButton
         '
@@ -968,7 +979,7 @@ Partial Class MainForm
         Me.oNav.Name = "oNav"
         Me.oNav.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.s1, Me.s3, Me.s4, Me.s5, Me.s6})
         Me.oNav.SelectedPage = Me.s3
-        Me.oNav.Size = New System.Drawing.Size(1160, 612)
+        Me.oNav.Size = New System.Drawing.Size(1157, 415)
         Me.oNav.TabIndex = 5
         Me.oNav.Text = "NavigationFrame1"
         '
@@ -980,7 +991,7 @@ Partial Class MainForm
         Me.s1.Controls.Add(Me.StandaloneBarDockControl2)
         Me.s1.Margin = New System.Windows.Forms.Padding(4)
         Me.s1.Name = "s1"
-        Me.s1.Size = New System.Drawing.Size(1160, 612)
+        Me.s1.Size = New System.Drawing.Size(1157, 415)
         '
         'gcr
         '
@@ -992,7 +1003,7 @@ Partial Class MainForm
         Me.gcr.Margin = New System.Windows.Forms.Padding(4)
         Me.gcr.MenuManager = Me.bm
         Me.gcr.Name = "gcr"
-        Me.gcr.Size = New System.Drawing.Size(1160, 570)
+        Me.gcr.Size = New System.Drawing.Size(1157, 373)
         Me.gcr.TabIndex = 2
         Me.gcr.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvr})
         '
@@ -1216,7 +1227,7 @@ Partial Class MainForm
         Me.s3.Controls.Add(Me.StandaloneBarDockControl3)
         Me.s3.Margin = New System.Windows.Forms.Padding(4)
         Me.s3.Name = "s3"
-        Me.s3.Size = New System.Drawing.Size(1160, 612)
+        Me.s3.Size = New System.Drawing.Size(1157, 415)
         '
         's5
         '
@@ -1226,7 +1237,7 @@ Partial Class MainForm
         Me.s5.Controls.Add(Me.StandaloneBarDockControl5)
         Me.s5.Margin = New System.Windows.Forms.Padding(4)
         Me.s5.Name = "s5"
-        Me.s5.Size = New System.Drawing.Size(1160, 612)
+        Me.s5.Size = New System.Drawing.Size(1157, 415)
         '
         'gci
         '
@@ -1238,7 +1249,7 @@ Partial Class MainForm
         Me.gci.Margin = New System.Windows.Forms.Padding(4)
         Me.gci.MenuManager = Me.bm
         Me.gci.Name = "gci"
-        Me.gci.Size = New System.Drawing.Size(1160, 570)
+        Me.gci.Size = New System.Drawing.Size(1157, 373)
         Me.gci.TabIndex = 3
         Me.gci.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvi})
         '
@@ -1329,7 +1340,7 @@ Partial Class MainForm
         Me.s6.Controls.Add(Me.StandaloneBarDockControl6)
         Me.s6.Margin = New System.Windows.Forms.Padding(4)
         Me.s6.Name = "s6"
-        Me.s6.Size = New System.Drawing.Size(1160, 612)
+        Me.s6.Size = New System.Drawing.Size(1157, 415)
         '
         'gco
         '
@@ -1341,7 +1352,7 @@ Partial Class MainForm
         Me.gco.Margin = New System.Windows.Forms.Padding(4)
         Me.gco.MenuManager = Me.bm
         Me.gco.Name = "gco"
-        Me.gco.Size = New System.Drawing.Size(1160, 570)
+        Me.gco.Size = New System.Drawing.Size(1157, 373)
         Me.gco.TabIndex = 4
         Me.gco.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvo})
         '
@@ -1395,7 +1406,7 @@ Partial Class MainForm
         Me.s4.Controls.Add(Me.StandaloneBarDockControl4)
         Me.s4.Margin = New System.Windows.Forms.Padding(4)
         Me.s4.Name = "s4"
-        Me.s4.Size = New System.Drawing.Size(1160, 612)
+        Me.s4.Size = New System.Drawing.Size(1157, 415)
         '
         'gce
         '
@@ -1407,7 +1418,7 @@ Partial Class MainForm
         Me.gce.Margin = New System.Windows.Forms.Padding(4)
         Me.gce.MenuManager = Me.bm
         Me.gce.Name = "gce"
-        Me.gce.Size = New System.Drawing.Size(1160, 570)
+        Me.gce.Size = New System.Drawing.Size(1157, 373)
         Me.gce.TabIndex = 3
         Me.gce.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gve})
         '
@@ -1513,12 +1524,12 @@ Partial Class MainForm
         Me.OfficeNavigationBar1.AutoSizeInLayoutControl = True
         Me.OfficeNavigationBar1.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden
         Me.OfficeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.OfficeNavigationBar1.Location = New System.Drawing.Point(0, 653)
+        Me.OfficeNavigationBar1.Location = New System.Drawing.Point(0, 456)
         Me.OfficeNavigationBar1.Margin = New System.Windows.Forms.Padding(4)
         Me.OfficeNavigationBar1.MenuManager = Me.bm
         Me.OfficeNavigationBar1.Name = "OfficeNavigationBar1"
         Me.OfficeNavigationBar1.NavigationClient = Me.oNav
-        Me.OfficeNavigationBar1.Size = New System.Drawing.Size(1160, 55)
+        Me.OfficeNavigationBar1.Size = New System.Drawing.Size(1157, 55)
         Me.OfficeNavigationBar1.TabIndex = 4
         Me.OfficeNavigationBar1.Text = "OfficeNavigationBar1"
         Me.OfficeNavigationBar1.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Skinned
@@ -1552,7 +1563,7 @@ Partial Class MainForm
         Me.ttc.SetAllowHtmlText(Me, DevExpress.Utils.DefaultBoolean.[Default])
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1160, 742)
+        Me.ClientSize = New System.Drawing.Size(1157, 545)
         Me.Controls.Add(Me.oNav)
         Me.Controls.Add(Me.OfficeNavigationBar1)
         Me.Controls.Add(Me.barDockControlLeft)
@@ -1726,4 +1737,5 @@ Partial Class MainForm
 	Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
 	Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
 	Friend WithEvents RepositoryItemSearchControl1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchControl
+    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
 End Class

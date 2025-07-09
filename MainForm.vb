@@ -34,7 +34,10 @@ NotInheritable Class MainForm
 
 	Private next_id As Int32 = 0
 
+
 	Private Sub ____Form_Load(sender As Object, e As EventArgs) Handles Me.Load
+		'DevExpress.Skins.SkinManager.EnableFormSkins()
+		'DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("The Bezier")
 		If Not Me.DesignMode Then
 			oNav.SelectedPageIndex = 0
 			Try
@@ -227,18 +230,21 @@ NotInheritable Class MainForm
 
 				Me.Invoke(writeStatus, "Loading CSVs", "please wait…")
 
-				For Each _f As String In Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly)
+				For Each _f As String In Directory.GetFiles(src_dir, "*.txt", SearchOption.TopDirectoryOnly)
 					lstFile.Add(Path.GetFileName(_f).ToLower(), New ods.DataDataTable)
 				Next
 
 				Tasks.Parallel.ForEach(
-					Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly),
+					Directory.GetFiles(src_dir, "*.txt", SearchOption.TopDirectoryOnly),
 					Sub(cf)
 						Me.Invoke(writeStatus, "Loading CSVs", Path.GetFileName(cf) & ", please wait…")
 						Dim _n As Int32 = 0
 						Dim s As String() = Nothing
 						_n = 0
-
+						'''''''''''''
+						'''''import/read txt file into temp db = lstFile
+						'''''only col 1 - 7 is imported (ignore unnecessary col)
+						'''''''''''''
 						Using csv As New FileIO.TextFieldParser(cf) With {
 						.Delimiters = {","},
 						.TextFieldType = FileIO.FieldType.Delimited,
@@ -325,7 +331,7 @@ NotInheritable Class MainForm
 				Dim lbp As Decimal = x.Options.Rows.Find(5)("c2") ' C10
 				Dim sbp As Decimal = x.Options.Rows.Find(6)("c2") ' D10
 				Dim rar10_5 As Int32 = x.Options.Rows.Find(7)("c2") ' E10
-
+				Dim mktff As Boolean = False
 
 
 				Dim cmMktUpdate As OleDbCommand = cn.NewCommand("update MktSpec set C22=?,C23=? where rn=?")
@@ -338,24 +344,24 @@ NotInheritable Class MainForm
 
 				x.MktSpec.Load(cn.NewCommand("select * from MktSpec").ExecuteReader())
 				fileNo = 0
-				rmkt0 = Nothing
+
 				'loop each file in the directory to calculate info for RAR page
 				'read one file, do calculation, put in a row in RAR page (there will be another loop inside)
-				For Each f As String In Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly)
+				For Each f As String In Directory.GetFiles(src_dir, "*.txt", SearchOption.TopDirectoryOnly)
+					'initilize new row for the file
+					rmkt0 = Nothing
 					Me.Invoke(writeStatus, f, "Calculating, please wait…")
 					fileNo += 1
 					fileName = Path.GetFileName(f)
-					mktName = fileName.Substring(0, 2)
+					mktName = fileName
+					mktff = False
 
 					For Each tmp As ods.MktSpecRow In x.MktSpec.Rows
 						'once find match exit for loop
-						If Len(tmp.c1) = 3 AndAlso tmp.c1.Substring(0, 3).Equals(fileName.Substring(0, 3)) Then
-							mktName = fileName.Substring(0, 3)
+						If tmp.c1.Trim.ToLower().Equals(fileName.ToLower()) Then
+							mktName = fileName
 							rmkt0 = tmp
-							Exit For
-						ElseIf Len(tmp.c1) = 2 AndAlso tmp.c1.Substring(0, 2).Equals(fileName.Substring(0, 2)) Then
-							mktName = fileName.Substring(0, 2)
-							rmkt0 = tmp
+							mktff = True
 							Exit For
 						End If
 					Next
@@ -363,6 +369,7 @@ NotInheritable Class MainForm
 					rRar.rn = fileNo
 					rRar.F1 = fileName
 					rRar.F2 = ""
+
 					If rmkt0 Is Nothing Then
 						x.RAR.Rows.Add(rRar)
 						XtraMessageBox.Show("Cannot find contract specification for " & fileName & ".", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -606,6 +613,7 @@ NotInheritable Class MainForm
 						Else
 							r = r / numd1
 							sd = Math.Sqrt(sd / numd1)
+							If sd = 0 Then sd = 1
 							rRar.F3 = If(r > 0, r / sd, r * sd)
 						End If
 					Else
@@ -672,16 +680,20 @@ NotInheritable Class MainForm
 								Dim necmi As Int32 = 0
 								Dim ttdt As Int32 = 0
 
-								If rmkt1.c1 = mktName.Substring(0, 2) Then Continue For
+								If rmkt1.c1 = mktName Then Continue For
 
-								For Each fx In Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly)
+								For Each fx In Directory.GetFiles(src_dir, "*.txt", SearchOption.TopDirectoryOnly)
 									'MessageBox.Show(rmkt1.c1.ToLower().Substring(0, 2), Path.GetFileNameWithoutExtension(fx).Substring(0, 2).ToLower())
-									If Path.GetFileNameWithoutExtension(fx).Substring(0, 2).ToLower().Equals(rmkt1.c1.ToLower().Substring(0, 2)) Then
+									If Path.GetFileName(fx).ToLower().Equals(rmkt1.c1.Trim().ToLower()) Then
 										ff = True
 										Exit For
 									End If
 								Next
-								If Not ff Then Continue For
+								If Not ff Then
+
+									XtraMessageBox.Show($"{rmkt1.c1} has open position, file not found!", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
+									Continue For
+								End If
 
 								Me.Invoke(writeStatus, f, "Calculating " & Path.GetFileName(fx) & ", please wait…")
 								mciData = lstFile(Path.GetFileName(fx).ToLower())
@@ -780,30 +792,55 @@ NotInheritable Class MainForm
 
 
 				'' sorting
-				Dim rnk As Double = 1
+				Dim rnk As Double = 0
 				Dim avgRk As Int32 = 0
+				Dim preRar As Decimal = 0
+				Dim ernk As Int32 = 0
 
 				For Each rRar In x.RAR.Select("", "f3 asc")
-					rRar.F9 = rnk
-					rnk += 1
-				Next
+					If Not Double.IsNaN(rRar.F3) Then
+						If rnk = 0 Or preRar <> rRar.F3 Then
+							rnk = rnk + ernk + 1
+							ernk = 0
+						Else
+							ernk += 1
+						End If
+						rRar.F9 = rnk
+						preRar = rRar.F3
+					End If
+                Next
 
-				rnk = 1
+				rnk = 0
+				preRar = 0
+				ernk = 0
 				For Each rRar In x.RAR.Select("", "f4 asc")
-					rRar.F10 = rnk
-					rnk += 1
+					If Not Double.IsNaN(rRar.F4) Then
+						If rnk = 0 Or preRar <> rRar.F4 Then
+							rnk = rnk + ernk + 1
+							ernk = 0
+						Else
+							ernk += 1
+						End If
+						rRar.F10 = rnk
+						preRar = rRar.F4
+					End If
 				Next
 
 				For Each rRar In x.RAR.Select("", "f4 desc")
 					If rRar.F2.Equals("") Then Continue For
+					' F11 = # of rank, F12 = Alloc Wt
+					If rRar.F10 <> 0 Then
+						rnk = (rRar.F9 + rRar.F10) / 2
+						avgRk = ((rnk * 30) \ x.RAR.Rows.Count) + 1
+						rRar.F11 = avgRk
+						rRar.F12 = (0.0024 * (avgRk) ^ 3 - 0.0715 * (avgRk) ^ 2 + 0.7238 * avgRk + 18.07) / (0.0024 * 30 ^ 3 - 0.0715 * 30 ^ 2 + 0.7238 * 30 + 18.07)
 
-					rnk = (rRar.F9 + rRar.F10) / 2
-					avgRk = ((rnk * 30) \ x.RAR.Rows.Count) + 1
-					rRar.F11 = avgRk
-					rRar.F12 = (0.0024 * (avgRk) ^ 3 - 0.0715 * (avgRk) ^ 2 + 0.7238 * avgRk + 18.07) / (0.0024 * 30 ^ 3 - 0.0715 * 30 ^ 2 + 0.7238 * 30 + 18.07)
+					Else
+						rRar.F11 = Double.NaN
+						rRar.F12 = 0.5
+					End If
+					'F13 = # of contract
 					rRar.F13 = accountSize * mmFactor / rRar.F5 * rRar.F12
-
-
 				Next
 
 
@@ -904,7 +941,7 @@ NotInheritable Class MainForm
 	End Sub
 
 	Private Sub taskLoadFile()
-		Dim fls As String() = Directory.GetFiles(src_dir, "*.prn", SearchOption.TopDirectoryOnly)
+		Dim fls As String() = Directory.GetFiles(src_dir, "*.txt", SearchOption.TopDirectoryOnly)
 		WWShow()
 		Using cn As New MsAccess
 			Try
@@ -1174,7 +1211,7 @@ NotInheritable Class MainForm
 				Dim rind As ods.IndexMundiRow = Nothing
 
 				For Each rmkt In x.MktSpec.Rows
-					rmkt._fnd = rmkt.c1.Substring(0, 2)
+					rmkt._fnd = rmkt.c1.Trim()
 					If rmkt.Isc10Null() Then rmkt.c10 = 0
 					'if USD, no need search for exchange rate
 					If Trim(rmkt.c12).Equals("") OrElse Trim(rmkt.c12).Equals("USD") Then
@@ -1257,7 +1294,7 @@ NotInheritable Class MainForm
 		End If
 	End Sub
 
-	Private Sub _oMktSave_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) 
+	Private Sub _oMktSave_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs)
 		Dim em As String = ""
 		Using cn As New MsAccess
 			Try
@@ -1594,3 +1631,9 @@ NotInheritable Class MainForm
 		Dim en As Boolean = (e.FocusedRowHandle >= 0)
 		oDeleteButton.Enabled = en
 	End Sub
+
+	Private Sub BarButtonItem1_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+
+	End Sub
+
+End Class
