@@ -92,7 +92,6 @@ Partial Class MainForm
         Me.colc211 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc22 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc23 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.StandaloneBarDockControl3 = New DevExpress.XtraBars.StandaloneBarDockControl()
         Me.Bar8 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
@@ -238,7 +237,7 @@ Partial Class MainForm
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl5)
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl6)
         Me.bm.Form = Me
-        Me.bm.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.oRefreshAllButton, Me.oCalcButton, Me.oMktMciUpdateButton, Me.oStatus, Me.oExportButton, Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv, Me.oRarExport_Html, Me.BarSubItem1, Me.oRiskExport_PDF, Me.oRiskExport_Excel, Me.oRiskExport_CSV, Me.oRiskExport_Html, Me.oSetFolderButton, Me.oFolderLoc, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.oAddButton, Me.oDeleteButton, Me.SkinBarSubItem1, Me.BarEditItem1, Me.BarButtonItem1})
+        Me.bm.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.oRefreshAllButton, Me.oCalcButton, Me.oMktMciUpdateButton, Me.oStatus, Me.oExportButton, Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv, Me.oRarExport_Html, Me.BarSubItem1, Me.oRiskExport_PDF, Me.oRiskExport_Excel, Me.oRiskExport_CSV, Me.oRiskExport_Html, Me.oSetFolderButton, Me.oFolderLoc, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.oAddButton, Me.oDeleteButton, Me.SkinBarSubItem1, Me.BarEditItem1})
         Me.bm.MaxItemId = 36
         Me.bm.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSearchControl1})
         Me.bm.StatusBar = Me.Bar3
@@ -479,7 +478,7 @@ Partial Class MainForm
         Me.Bar7.DockRow = 0
         Me.Bar7.DockStyle = DevExpress.XtraBars.BarDockStyle.Standalone
         Me.Bar7.FloatLocation = New System.Drawing.Point(37, 213)
-        Me.Bar7.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oAddButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oDeleteButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarEditItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
+        Me.Bar7.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oAddButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.oDeleteButton, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarEditItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)})
         Me.Bar7.OptionsBar.AllowQuickCustomization = False
         Me.Bar7.OptionsBar.DisableClose = True
         Me.Bar7.OptionsBar.DisableCustomization = True
@@ -786,6 +785,8 @@ Partial Class MainForm
         '
         Me.colc20.Caption = "# of Contract"
         Me.colc20.FieldName = "c20"
+        Me.colc20.DisplayFormat.FormatString = "n0"
+        Me.colc20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colc20.MinWidth = 75
         Me.colc20.Name = "colc20"
         Me.colc20.OptionsColumn.FixedWidth = True
@@ -831,14 +832,6 @@ Partial Class MainForm
         Me.colc23.Visible = True
         Me.colc23.VisibleIndex = 13
         Me.colc23.Width = 90
-        '
-        'BarButtonItem1
-        '
-        Me.BarButtonItem1.Caption = "Update AllocWt"
-        Me.BarButtonItem1.Id = 35
-        Me.BarButtonItem1.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.BarButtonItem1.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'StandaloneBarDockControl3
         '
@@ -1608,20 +1601,20 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents bm As DevExpress.XtraBars.BarManager
-	Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
-	Friend WithEvents Bar3 As DevExpress.XtraBars.Bar
-	Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
-	Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
-	Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
-	Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
-	Friend WithEvents ttc As DevExpress.Utils.DefaultToolTipController
-	Friend WithEvents dlf As DevExpress.LookAndFeel.DefaultLookAndFeel
-	Friend WithEvents pr As DevExpress.XtraEditors.Repository.PersistentRepository
-	Friend WithEvents ds As ods
-	Friend WithEvents OfficeNavigationBar1 As DevExpress.XtraBars.Navigation.OfficeNavigationBar
-	Friend WithEvents ssm As DevExpress.XtraSplashScreen.SplashScreenManager
-	Friend WithEvents oNav As DevExpress.XtraBars.Navigation.NavigationFrame
-	Friend WithEvents s1 As DevExpress.XtraBars.Navigation.NavigationPage
+    Friend WithEvents Bar1 As DevExpress.XtraBars.Bar
+    Friend WithEvents Bar3 As DevExpress.XtraBars.Bar
+    Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents ttc As DevExpress.Utils.DefaultToolTipController
+    Friend WithEvents dlf As DevExpress.LookAndFeel.DefaultLookAndFeel
+    Friend WithEvents pr As DevExpress.XtraEditors.Repository.PersistentRepository
+    Friend WithEvents ds As ods
+    Friend WithEvents OfficeNavigationBar1 As DevExpress.XtraBars.Navigation.OfficeNavigationBar
+    Friend WithEvents ssm As DevExpress.XtraSplashScreen.SplashScreenManager
+    Friend WithEvents oNav As DevExpress.XtraBars.Navigation.NavigationFrame
+    Friend WithEvents s1 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents s3 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents s4 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents s5 As DevExpress.XtraBars.Navigation.NavigationPage
@@ -1706,36 +1699,35 @@ Partial Class MainForm
     Friend WithEvents bsSector As BindingSource
     Friend WithEvents bwCalc As System.ComponentModel.BackgroundWorker
     Friend WithEvents oCalcButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oMktMciUpdateButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents bwWeb As System.ComponentModel.BackgroundWorker
-	Friend WithEvents oStatus As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents bwMkt As System.ComponentModel.BackgroundWorker
-	Friend WithEvents col_color As DevExpress.XtraGrid.Columns.GridColumn
-	Friend WithEvents rpYesNo As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-	Friend WithEvents oExportButton As DevExpress.XtraBars.BarSubItem
-	Friend WithEvents oRarExport_PDF As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRarExport_Excel As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRarExport_Csv As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents sfd As SaveFileDialog
-	Friend WithEvents oRarExport_Html As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
-	Friend WithEvents oRiskExport_PDF As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_Excel As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_CSV As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_Html As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oSetFolderButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oFolderLoc As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents fbd As FolderBrowserDialog
-	Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem2 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents oAddButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oDeleteButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
-	Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
-	Friend WithEvents RepositoryItemSearchControl1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchControl
-    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oMktMciUpdateButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bwWeb As System.ComponentModel.BackgroundWorker
+    Friend WithEvents oStatus As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents bwMkt As System.ComponentModel.BackgroundWorker
+    Friend WithEvents col_color As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents rpYesNo As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+    Friend WithEvents oExportButton As DevExpress.XtraBars.BarSubItem
+    Friend WithEvents oRarExport_PDF As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRarExport_Excel As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRarExport_Csv As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents sfd As SaveFileDialog
+    Friend WithEvents oRarExport_Html As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
+    Friend WithEvents oRiskExport_PDF As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_Excel As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_CSV As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_Html As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oSetFolderButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oFolderLoc As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents fbd As FolderBrowserDialog
+    Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem2 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents oAddButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oDeleteButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
+    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemSearchControl1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchControl
 End Class

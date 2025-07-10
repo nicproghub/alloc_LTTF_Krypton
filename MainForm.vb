@@ -673,7 +673,7 @@ NotInheritable Class MainForm
 						For Each rmkt1 In x.MktSpec.Rows
 							mciData = New ods.DataDataTable
 							ff = False
-							If Not rmkt1.Isc19Null() Then
+							If Not rmkt1.Isc19Null() And rmkt1.c19 <> "" Then
 
 								Dim cmict2 As Int32 = 1
 								Dim cmi As Int32 = 0
@@ -757,15 +757,15 @@ NotInheritable Class MainForm
 								If ttdt <> 0 Then
 									If cmi <> 0 Then
 										If (cmi / ttdt) > 0.59 Then
-											If rmkt1.c19.ToLower().StartsWith("b") Then bmktcmi = bmktcmi + cmi / ttdt * rmkt1.c21
-											If rmkt1.c19.ToLower().StartsWith("s") Then smktcmi = smktcmi + cmi / ttdt * rmkt1.c21
+											If rmkt1.c19.Trim().ToLower().StartsWith("b") Then bmktcmi = bmktcmi + cmi / ttdt * rmkt1.c21
+											If rmkt1.c19.Trim().ToLower().StartsWith("s") Then smktcmi = smktcmi + cmi / ttdt * rmkt1.c21
 										End If
 									End If
 
 									If necmi <> 0 Then
 										If (necmi / ttdt) > 0.59 Then
-											If rmkt1.c19.ToLower().StartsWith("b") Then smktcmi = smktcmi + necmi / ttdt * rmkt1.c21
-											If rmkt1.c19.ToLower().StartsWith("s") Then bmktcmi = bmktcmi + necmi / ttdt * rmkt1.c21
+											If rmkt1.c19.Trim().ToLower().StartsWith("b") Then smktcmi = smktcmi + necmi / ttdt * rmkt1.c21
+											If rmkt1.c19.Trim().ToLower().StartsWith("s") Then bmktcmi = bmktcmi + necmi / ttdt * rmkt1.c21
 										End If
 									End If
 								End If
@@ -808,7 +808,7 @@ NotInheritable Class MainForm
 						rRar.F9 = rnk
 						preRar = rRar.F3
 					End If
-                Next
+				Next
 
 				rnk = 0
 				preRar = 0
@@ -886,7 +886,7 @@ NotInheritable Class MainForm
 							Next
 
 						Else
-							' if MktSpec is found, inset all 
+							' if MktSpec is found, insert all 
 							For Each c As DataColumn In ds.RAR.Columns
 								.Item("@" & c.ColumnName).Value = rRar(c.ColumnName)
 							Next
@@ -1209,7 +1209,7 @@ NotInheritable Class MainForm
 				Dim rmkt As ods.MktSpecRow = Nothing
 				Dim rexc As ods.ExchangeRateRow = Nothing
 				Dim rind As ods.IndexMundiRow = Nothing
-
+				' update big point value from local to USD in MktSpec
 				For Each rmkt In x.MktSpec.Rows
 					rmkt._fnd = rmkt.c1.Trim()
 					If rmkt.Isc10Null() Then rmkt.c10 = 0
@@ -1523,6 +1523,64 @@ NotInheritable Class MainForm
 
 				cn.NewCommand(w.ToString()).ExecuteNonQuery()
 
+				' --- NEW: Update c20/c21 if OP or c19 changed ---
+				If e.Column.FieldName = "c19" Then
+
+					' Find matching RAR record
+					Dim rrar As ods.RARRow = Nothing
+					'Dim x As New ods()
+					'Dim reader As OleDbDataReader = Nothing
+					For Each tmp As ods.RARRow In ds.RAR.Rows
+						If tmp.F1.Trim().Equals(r.c1.Trim(), StringComparison.OrdinalIgnoreCase) Then
+							rrar = tmp
+							Exit For
+						End If
+					Next
+					''''''' if delete position, need to delete
+					''''''' if add position , need to copy
+					''''''' if wrong symbol, error message and delete 
+
+					If rrar IsNot Nothing Then
+						Dim eval As String = e.Value.Trim().ToString().ToLower()
+						' if add "b" or "s" position
+						If e.Value = "" OrElse (eval <> "b" AndAlso eval <> "s") Then
+							If e.Value <> "" Then
+								XtraMessageBox.Show("Please input 'B' or 'S' values only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+							End If
+							' if delete position
+							r.Setc19Null()
+							r.Setc20Null()
+							r.Setc21Null()
+						Else
+							' Update MktSpec with values from RAR
+							r.c19 = e.Value
+							r.c20 = If(rrar.IsF12Null(), DBNull.Value, rrar.F13)
+							r.c21 = If(rrar.IsF13Null(), DBNull.Value, rrar.F12)
+
+						End If
+						' Push changes to database
+						' Add parameters safely
+						Dim cmd As OleDbCommand = cn.NewCommand("UPDATE mktspec SET c19 = ?, c20 = ?, c21 = ? WHERE rn = ?")
+						cmd.Parameters.AddWithValue("@c19", If(r.Isc19Null(), DBNull.Value, r.c19))
+						cmd.Parameters.AddWithValue("@c20", If(r.Isc20Null(), DBNull.Value, r.c20))
+						cmd.Parameters.AddWithValue("@c21", If(r.Isc21Null(), DBNull.Value, r.c21))
+						cmd.Parameters.AddWithValue("@rn", r.rn)
+						cmd.ExecuteNonQuery()
+						' Refresh grid to show changes
+						'gvm.RefreshRow(e.RowHandle)
+					Else
+						If e.Value IsNot DBNull.Value Then
+							r.Setc19Null()
+							XtraMessageBox.Show("No AllocWt Value is found in RAR", "AllocWt not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+							Dim cmd As OleDbCommand = cn.NewCommand("UPDATE mktspec SET c19 = ? WHERE rn = ?")
+							cmd.Parameters.AddWithValue("@c19", If(r.Isc19Null(), DBNull.Value, r.c19))
+							cmd.Parameters.AddWithValue("@rn", r.rn)
+							cmd.ExecuteNonQuery()
+						End If
+					End If
+
+				End If
+
 			Catch ex As Exception
 				em = ex.Message
 			Finally
@@ -1630,10 +1688,6 @@ NotInheritable Class MainForm
 	Private Sub gvm_FocusedRowChanged(sender As Object, e As FocusedRowChangedEventArgs) Handles gvm.FocusedRowChanged
 		Dim en As Boolean = (e.FocusedRowHandle >= 0)
 		oDeleteButton.Enabled = en
-	End Sub
-
-	Private Sub BarButtonItem1_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
-
 	End Sub
 
 End Class
