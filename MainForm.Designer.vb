@@ -1,8 +1,9 @@
-﻿Imports DevExpress.Pdf.Native
+﻿Imports ComponentFactory
+Imports DevExpress.Pdf.Native
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
-    Inherits DevExpress.XtraEditors.XtraForm
+    Inherits Krypton.Toolkit.KryptonForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -224,7 +225,7 @@ Partial Class MainForm
         Me.colF16.VisibleIndex = 14
         Me.colF16.Width = 97
         '
-        'bm
+        'bm - top status bar
         '
         Me.bm.Bars.AddRange(New DevExpress.XtraBars.Bar() {Me.Bar1, Me.Bar3, Me.Bar4, Me.Bar5, Me.Bar6, Me.Bar7, Me.Bar8, Me.Bar9})
         Me.bm.DockControls.Add(Me.barDockControlTop)
@@ -241,6 +242,7 @@ Partial Class MainForm
         Me.bm.MaxItemId = 36
         Me.bm.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemSearchControl1})
         Me.bm.StatusBar = Me.Bar3
+
         '
         'Bar1
         '
@@ -784,9 +786,9 @@ Partial Class MainForm
         'colc20
         '
         Me.colc20.Caption = "# of Contract"
-        Me.colc20.FieldName = "c20"
         Me.colc20.DisplayFormat.FormatString = "n0"
         Me.colc20.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.colc20.FieldName = "c20"
         Me.colc20.MinWidth = 75
         Me.colc20.Name = "colc20"
         Me.colc20.OptionsColumn.FixedWidth = True
@@ -1563,7 +1565,8 @@ Partial Class MainForm
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.IconOptions.Icon = CType(resources.GetObject("MainForm.IconOptions.Icon"), System.Drawing.Icon)
+        'Me.IconOptions.Icon = CType(resources.GetObject("MainForm.IconOptions.Icon"), System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MainForm"
         Me.Text = "LTTF Alloc v7.0"

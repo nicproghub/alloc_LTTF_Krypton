@@ -1,8 +1,10 @@
-DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraBars.StandaloneBarDockControl, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.XtraBars.Navigation.NavigationFrame, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Utils.DefaultToolTipController, DevExpress.Utils.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit, DevExpress.XtraEditors.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraSplashScreen.SplashScreenManager, DevExpress.XtraEditors.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.Navigation.OfficeNavigationBar, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.Navigation.NavigationFrame, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.Ribbon.RibbonStatusBar, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraToolbox.ToolboxControl, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Utils.DefaultToolTipController, DevExpress.Utils.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraBars.StandaloneBarDockControl, DevExpress.XtraBars.v24.2, Version=24.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
