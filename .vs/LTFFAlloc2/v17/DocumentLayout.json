@@ -42,8 +42,8 @@
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb [Design]*",
-              "RelativeToolTip": "Form1.vb [Design]*",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb [Design]",
+              "RelativeToolTip": "Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-07-11T02:43:28.419Z",
               "EditorCaption": " [Design]"
@@ -54,11 +54,12 @@
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb*",
-              "RelativeToolTip": "Form1.vb*",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
               "ViewState": "AgIAADEAAAAAAAAAAADgvzUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-11T03:12:25.145Z"
+              "WhenOpened": "2025-07-11T03:12:25.145Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,11 +67,12 @@
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "Form1.Designer.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.Designer.vb*",
-              "RelativeToolTip": "Form1.Designer.vb*",
-              "ViewState": "AgIAAI8AAAAAAAAAAADwv48AAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAACcDAAAAAAAAAAAIwDQDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-11T06:29:30.553Z"
+              "WhenOpened": "2025-07-11T06:29:30.553Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

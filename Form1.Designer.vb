@@ -27,8 +27,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.mainPanel = New ComponentFactory.Krypton.Toolkit.KryptonPanel()
         Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
         Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
@@ -69,21 +69,7 @@ Partial Class Form1
         Me.C22DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.C23DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.MktSpecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KryptonPage3 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-        Me.gve = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
-        Me.XCurrencyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.XDat0DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.XDat1DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.XChangeDataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.XCountryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ExchangeRateBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KryptonPage4 = New ComponentFactory.Krypton.Navigator.KryptonPage()
-        Me.gvi = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
-        Me.XDateDataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewDateTimePickerColumn()
-        Me.XAreaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.XCurrencyDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.XRateDataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.XInverseDataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.IndexMundiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KryptonPage5 = New ComponentFactory.Krypton.Navigator.KryptonPage()
         Me.gvo = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
@@ -121,13 +107,7 @@ Partial Class Form1
         Me.KryptonPage2.SuspendLayout()
         CType(Me.gvm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MktSpecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.KryptonPage3.SuspendLayout()
-        CType(Me.gve, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExchangeRateBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.KryptonPage4.SuspendLayout()
-        CType(Me.gvi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IndexMundiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonPage5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonPage5.SuspendLayout()
@@ -154,7 +134,7 @@ Partial Class Form1
         Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 34)
         Me.KryptonNavigator1.Name = "KryptonNavigator1"
-        Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage3, Me.KryptonPage4, Me.KryptonPage5})
+        Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage5})
         Me.KryptonNavigator1.SelectedIndex = 2
         Me.KryptonNavigator1.Size = New System.Drawing.Size(1232, 555)
         Me.KryptonNavigator1.TabIndex = 1
@@ -521,180 +501,10 @@ Partial Class Form1
         Me.MktSpecBindingSource.DataMember = "MktSpec"
         Me.MktSpecBindingSource.DataSource = Me.ds
         '
-        'KryptonPage3
-        '
-        Me.KryptonPage3.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-        Me.KryptonPage3.Controls.Add(Me.gve)
-        Me.KryptonPage3.Flags = 65534
-        Me.KryptonPage3.LastVisibleSet = True
-        Me.KryptonPage3.MinimumSize = New System.Drawing.Size(50, 50)
-        Me.KryptonPage3.Name = "KryptonPage3"
-        Me.KryptonPage3.Size = New System.Drawing.Size(1230, 519)
-        Me.KryptonPage3.Text = "ExchangeRate"
-        Me.KryptonPage3.ToolTipTitle = "Page ToolTip"
-        Me.KryptonPage3.UniqueName = "6DA00B7B2282416A4C99FBF92FAAB1E7"
-        '
-        'gve
-        '
-        Me.gve.AutoGenerateColumns = False
-        Me.gve.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.gve.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.gve.ColumnHeadersHeight = 30
-        Me.gve.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.XCurrencyDataGridViewTextBoxColumn, Me.XDat0DataGridViewTextBoxColumn, Me.XDat1DataGridViewTextBoxColumn, Me.XChangeDataGridViewTextBoxColumn, Me.XCountryDataGridViewTextBoxColumn})
-        Me.gve.DataSource = Me.ExchangeRateBindingSource
-        Me.gve.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gve.Location = New System.Drawing.Point(0, 0)
-        Me.gve.Name = "gve"
-        Me.gve.RowHeadersVisible = False
-        Me.gve.RowHeadersWidth = 62
-        Me.gve.RowTemplate.Height = 28
-        Me.gve.Size = New System.Drawing.Size(1230, 519)
-        Me.gve.TabIndex = 0
-        '
-        'XCurrencyDataGridViewTextBoxColumn
-        '
-        Me.XCurrencyDataGridViewTextBoxColumn.DataPropertyName = "xCurrency"
-        Me.XCurrencyDataGridViewTextBoxColumn.HeaderText = "Currency"
-        Me.XCurrencyDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XCurrencyDataGridViewTextBoxColumn.Name = "XCurrencyDataGridViewTextBoxColumn"
-        Me.XCurrencyDataGridViewTextBoxColumn.Width = 121
-        '
-        'XDat0DataGridViewTextBoxColumn
-        '
-        Me.XDat0DataGridViewTextBoxColumn.DataPropertyName = "xDat0"
-        Me.XDat0DataGridViewTextBoxColumn.DecimalPlaces = 4
-        Me.XDat0DataGridViewTextBoxColumn.HeaderText = "Dat0"
-        Me.XDat0DataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XDat0DataGridViewTextBoxColumn.Name = "XDat0DataGridViewTextBoxColumn"
-        Me.XDat0DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XDat0DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XDat0DataGridViewTextBoxColumn.Width = 90
-        '
-        'XDat1DataGridViewTextBoxColumn
-        '
-        Me.XDat1DataGridViewTextBoxColumn.DataPropertyName = "xDat1"
-        Me.XDat1DataGridViewTextBoxColumn.DecimalPlaces = 4
-        Me.XDat1DataGridViewTextBoxColumn.HeaderText = "Dat1"
-        Me.XDat1DataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XDat1DataGridViewTextBoxColumn.Name = "XDat1DataGridViewTextBoxColumn"
-        Me.XDat1DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XDat1DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XDat1DataGridViewTextBoxColumn.Width = 90
-        '
-        'XChangeDataGridViewTextBoxColumn
-        '
-        Me.XChangeDataGridViewTextBoxColumn.DataPropertyName = "xChange"
-        Me.XChangeDataGridViewTextBoxColumn.DecimalPlaces = 2
-        Me.XChangeDataGridViewTextBoxColumn.HeaderText = "Change(%)"
-        Me.XChangeDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XChangeDataGridViewTextBoxColumn.Name = "XChangeDataGridViewTextBoxColumn"
-        Me.XChangeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XChangeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XChangeDataGridViewTextBoxColumn.Width = 137
-        '
-        'XCountryDataGridViewTextBoxColumn
-        '
-        Me.XCountryDataGridViewTextBoxColumn.DataPropertyName = "xCountry"
-        Me.XCountryDataGridViewTextBoxColumn.HeaderText = "Country"
-        Me.XCountryDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XCountryDataGridViewTextBoxColumn.Name = "XCountryDataGridViewTextBoxColumn"
-        Me.XCountryDataGridViewTextBoxColumn.Width = 115
-        '
         'ExchangeRateBindingSource
         '
         Me.ExchangeRateBindingSource.DataMember = "ExchangeRate"
         Me.ExchangeRateBindingSource.DataSource = Me.ds
-        '
-        'KryptonPage4
-        '
-        Me.KryptonPage4.AutoHiddenSlideSize = New System.Drawing.Size(200, 200)
-        Me.KryptonPage4.Controls.Add(Me.gvi)
-        Me.KryptonPage4.Flags = 65534
-        Me.KryptonPage4.LastVisibleSet = True
-        Me.KryptonPage4.MinimumSize = New System.Drawing.Size(50, 50)
-        Me.KryptonPage4.Name = "KryptonPage4"
-        Me.KryptonPage4.Size = New System.Drawing.Size(1230, 519)
-        Me.KryptonPage4.Text = "IndexMundi"
-        Me.KryptonPage4.ToolTipTitle = "Page ToolTip"
-        Me.KryptonPage4.UniqueName = "3616233F506E4998C989B31922FEA143"
-        '
-        'gvi
-        '
-        Me.gvi.AutoGenerateColumns = False
-        Me.gvi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.gvi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.gvi.ColumnHeadersHeight = 30
-        Me.gvi.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.XDateDataGridViewTextBoxColumn, Me.XAreaDataGridViewTextBoxColumn, Me.XCurrencyDataGridViewTextBoxColumn1, Me.XRateDataGridViewTextBoxColumn, Me.XInverseDataGridViewTextBoxColumn})
-        Me.gvi.DataSource = Me.IndexMundiBindingSource
-        Me.gvi.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gvi.Location = New System.Drawing.Point(0, 0)
-        Me.gvi.Name = "gvi"
-        Me.gvi.ReadOnly = True
-        Me.gvi.RowHeadersVisible = False
-        Me.gvi.RowHeadersWidth = 30
-        Me.gvi.RowTemplate.Height = 28
-        Me.gvi.Size = New System.Drawing.Size(1230, 519)
-        Me.gvi.TabIndex = 0
-        '
-        'XDateDataGridViewTextBoxColumn
-        '
-        Me.XDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.XDateDataGridViewTextBoxColumn.Checked = False
-        Me.XDateDataGridViewTextBoxColumn.DataPropertyName = "xDate"
-        Me.XDateDataGridViewTextBoxColumn.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.XDateDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.XDateDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XDateDataGridViewTextBoxColumn.Name = "XDateDataGridViewTextBoxColumn"
-        Me.XDateDataGridViewTextBoxColumn.ReadOnly = True
-        Me.XDateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XDateDataGridViewTextBoxColumn.Width = 89
-        '
-        'XAreaDataGridViewTextBoxColumn
-        '
-        Me.XAreaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.XAreaDataGridViewTextBoxColumn.DataPropertyName = "xArea"
-        Me.XAreaDataGridViewTextBoxColumn.HeaderText = "Area"
-        Me.XAreaDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XAreaDataGridViewTextBoxColumn.Name = "XAreaDataGridViewTextBoxColumn"
-        Me.XAreaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.XAreaDataGridViewTextBoxColumn.Width = 88
-        '
-        'XCurrencyDataGridViewTextBoxColumn1
-        '
-        Me.XCurrencyDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.XCurrencyDataGridViewTextBoxColumn1.DataPropertyName = "xCurrency"
-        Me.XCurrencyDataGridViewTextBoxColumn1.HeaderText = "Currency"
-        Me.XCurrencyDataGridViewTextBoxColumn1.MinimumWidth = 8
-        Me.XCurrencyDataGridViewTextBoxColumn1.Name = "XCurrencyDataGridViewTextBoxColumn1"
-        Me.XCurrencyDataGridViewTextBoxColumn1.ReadOnly = True
-        Me.XCurrencyDataGridViewTextBoxColumn1.Width = 121
-        '
-        'XRateDataGridViewTextBoxColumn
-        '
-        Me.XRateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.XRateDataGridViewTextBoxColumn.DataPropertyName = "xRate"
-        Me.XRateDataGridViewTextBoxColumn.DecimalPlaces = 4
-        Me.XRateDataGridViewTextBoxColumn.HeaderText = "Rate"
-        Me.XRateDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XRateDataGridViewTextBoxColumn.Name = "XRateDataGridViewTextBoxColumn"
-        Me.XRateDataGridViewTextBoxColumn.ReadOnly = True
-        Me.XRateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XRateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XRateDataGridViewTextBoxColumn.Width = 87
-        '
-        'XInverseDataGridViewTextBoxColumn
-        '
-        Me.XInverseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.XInverseDataGridViewTextBoxColumn.DataPropertyName = "xInverse"
-        Me.XInverseDataGridViewTextBoxColumn.DecimalPlaces = 4
-        Me.XInverseDataGridViewTextBoxColumn.HeaderText = "Inverse"
-        Me.XInverseDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.XInverseDataGridViewTextBoxColumn.Name = "XInverseDataGridViewTextBoxColumn"
-        Me.XInverseDataGridViewTextBoxColumn.ReadOnly = True
-        Me.XInverseDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.XInverseDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.XInverseDataGridViewTextBoxColumn.Width = 108
         '
         'IndexMundiBindingSource
         '
@@ -709,7 +519,7 @@ Partial Class Form1
         Me.KryptonPage5.LastVisibleSet = True
         Me.KryptonPage5.MinimumSize = New System.Drawing.Size(50, 50)
         Me.KryptonPage5.Name = "KryptonPage5"
-        Me.KryptonPage5.Size = New System.Drawing.Size(1230, 515)
+        Me.KryptonPage5.Size = New System.Drawing.Size(1230, 519)
         Me.KryptonPage5.Text = "Options"
         Me.KryptonPage5.ToolTipTitle = "Page ToolTip"
         Me.KryptonPage5.UniqueName = "B58E8CD8ABBC4AF6EF87043174B230D5"
@@ -730,15 +540,15 @@ Partial Class Form1
         Me.gvo.RowHeadersVisible = False
         Me.gvo.RowHeadersWidth = 30
         Me.gvo.RowTemplate.Height = 28
-        Me.gvo.Size = New System.Drawing.Size(1230, 515)
+        Me.gvo.Size = New System.Drawing.Size(1230, 519)
         Me.gvo.TabIndex = 0
         '
         'colc110
         '
         Me.colc110.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.colc110.DataPropertyName = "c1"
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colc110.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colc110.DefaultCellStyle = DataGridViewCellStyle3
         Me.colc110.HeaderText = "ID"
         Me.colc110.MinimumWidth = 8
         Me.colc110.Name = "colc110"
@@ -748,8 +558,8 @@ Partial Class Form1
         '
         Me.colc24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.colc24.DataPropertyName = "c2"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.colc24.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.colc24.DefaultCellStyle = DataGridViewCellStyle4
         Me.colc24.HeaderText = "Value"
         Me.colc24.MinimumWidth = 8
         Me.colc24.Name = "colc24"
@@ -924,13 +734,7 @@ Partial Class Form1
         Me.KryptonPage2.ResumeLayout(False)
         CType(Me.gvm, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MktSpecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KryptonPage3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.KryptonPage3.ResumeLayout(False)
-        CType(Me.gve, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ExchangeRateBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KryptonPage4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.KryptonPage4.ResumeLayout(False)
-        CType(Me.gvi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IndexMundiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KryptonPage5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonPage5.ResumeLayout(False)
@@ -952,8 +756,6 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents oRefreshAllButton As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
-    Friend WithEvents KryptonPage3 As ComponentFactory.Krypton.Navigator.KryptonPage
-    Friend WithEvents KryptonPage4 As ComponentFactory.Krypton.Navigator.KryptonPage
     Friend WithEvents KryptonPage5 As ComponentFactory.Krypton.Navigator.KryptonPage
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents oStatus As ToolStripStatusLabel
@@ -982,9 +784,7 @@ Partial Class Form1
     Friend WithEvents RARBindingSource As BindingSource
     Friend WithEvents gvm As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
     Friend WithEvents MktSpecBindingSource As BindingSource
-    Friend WithEvents gve As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
     Friend WithEvents ExchangeRateBindingSource As BindingSource
-    Friend WithEvents gvi As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
     Friend WithEvents IndexMundiBindingSource As BindingSource
     Friend WithEvents OptionsBindingSource As BindingSource
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
@@ -1002,16 +802,6 @@ Partial Class Form1
     Friend WithEvents gvo As KryptonDataGridView
     Friend WithEvents C1DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents C2DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents XDateDataGridViewTextBoxColumn As KryptonDataGridViewDateTimePickerColumn
-    Friend WithEvents XAreaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents XCurrencyDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents XRateDataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents XInverseDataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents XCurrencyDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents XDat0DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents XDat1DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents XChangeDataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents XCountryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents colc110 As DataGridViewTextBoxColumn
     Friend WithEvents colc24 As DataGridViewTextBoxColumn
     Friend WithEvents C1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
