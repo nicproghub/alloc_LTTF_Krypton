@@ -68,7 +68,7 @@ Partial Class MainForm
         Me.RepositoryItemSearchControl1 = New DevExpress.XtraEditors.Repository.RepositoryItemSearchControl()
         Me.gcm = New DevExpress.XtraGrid.GridControl()
         Me.bsMkt = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ds = New LTFFAlloc2.ods()
+        Me.ds = New LTFFAlloc25.ods()
         Me.pr = New DevExpress.XtraEditors.Repository.PersistentRepository(Me.components)
         Me.rpYesNo = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
         Me.gvm = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -153,7 +153,7 @@ Partial Class MainForm
         Me.bsSector = New System.Windows.Forms.BindingSource(Me.components)
         Me.OfficeNavigationBar1 = New DevExpress.XtraBars.Navigation.OfficeNavigationBar()
         Me.dlf = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-        Me.ssm = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.LTFFAlloc2.WaitForm1), False, False)
+        Me.ssm = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.LTFFAlloc25.WaitForm1), False, False)
         Me.bwRefresh = New System.ComponentModel.BackgroundWorker()
         Me.bwCalc = New System.ComponentModel.BackgroundWorker()
         Me.bwWeb = New System.ComponentModel.BackgroundWorker()
@@ -262,15 +262,15 @@ Partial Class MainForm
         '
         Me.oSetFolderButton.Caption = "Set Folder..."
         Me.oSetFolderButton.Id = 22
-        Me.oSetFolderButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.open_16x16
-        Me.oSetFolderButton.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.open_32x32
+        Me.oSetFolderButton.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.open_16x16
+        Me.oSetFolderButton.ImageOptions.LargeImage = Global.LTFFAlloc25.My.Resources.Resources.open_32x32
         Me.oSetFolderButton.Name = "oSetFolderButton"
         '
         'oRefreshAllButton
         '
         Me.oRefreshAllButton.Caption = "Refresh"
         Me.oRefreshAllButton.Id = 5
-        Me.oRefreshAllButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.refresh_16x16
+        Me.oRefreshAllButton.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.refresh_16x16
         Me.oRefreshAllButton.Name = "oRefreshAllButton"
         '
         'oMktMciUpdateButton
@@ -333,7 +333,7 @@ Partial Class MainForm
         '
         Me.BarStaticItem6.Caption = "Risk"
         Me.BarStaticItem6.Id = 30
-        Me.BarStaticItem6.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.table_16x16
+        Me.BarStaticItem6.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.table_16x16
         Me.BarStaticItem6.Name = "BarStaticItem6"
         Me.BarStaticItem6.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
@@ -341,7 +341,7 @@ Partial Class MainForm
         '
         Me.BarSubItem1.Caption = "Export"
         Me.BarSubItem1.Id = 17
-        Me.BarSubItem1.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.export_16x16
+        Me.BarSubItem1.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.export_16x16
         Me.BarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.oRiskExport_PDF), New DevExpress.XtraBars.LinkPersistInfo(Me.oRiskExport_Excel), New DevExpress.XtraBars.LinkPersistInfo(Me.oRiskExport_CSV), New DevExpress.XtraBars.LinkPersistInfo(Me.oRiskExport_Html)})
         Me.BarSubItem1.Name = "BarSubItem1"
         '
@@ -389,8 +389,8 @@ Partial Class MainForm
         '
         Me.BarStaticItem3.Caption = "IndexMundi"
         Me.BarStaticItem3.Id = 27
-        Me.BarStaticItem3.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.table_16x16
-        Me.BarStaticItem3.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.table_32x32
+        Me.BarStaticItem3.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.table_16x16
+        Me.BarStaticItem3.ImageOptions.LargeImage = Global.LTFFAlloc25.My.Resources.Resources.table_32x32
         Me.BarStaticItem3.Name = "BarStaticItem3"
         Me.BarStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
@@ -425,7 +425,7 @@ Partial Class MainForm
         '
         Me.BarStaticItem5.Caption = "RAR"
         Me.BarStaticItem5.Id = 29
-        Me.BarStaticItem5.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.table_16x16
+        Me.BarStaticItem5.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.table_16x16
         Me.BarStaticItem5.Name = "BarStaticItem5"
         Me.BarStaticItem5.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
@@ -433,8 +433,8 @@ Partial Class MainForm
         '
         Me.oExportButton.Caption = "Export"
         Me.oExportButton.Id = 12
-        Me.oExportButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.export_16x16
-        Me.oExportButton.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.export_32x32
+        Me.oExportButton.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.export_16x16
+        Me.oExportButton.ImageOptions.LargeImage = Global.LTFFAlloc25.My.Resources.Resources.export_32x32
         Me.oExportButton.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.oRarExport_PDF), New DevExpress.XtraBars.LinkPersistInfo(Me.oRarExport_Excel), New DevExpress.XtraBars.LinkPersistInfo(Me.oRarExport_Csv), New DevExpress.XtraBars.LinkPersistInfo(Me.oRarExport_Html)})
         Me.oExportButton.Name = "oExportButton"
         '
@@ -493,7 +493,7 @@ Partial Class MainForm
         '
         Me.BarStaticItem1.Caption = "MktSpec"
         Me.BarStaticItem1.Id = 24
-        Me.BarStaticItem1.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.table_16x16
+        Me.BarStaticItem1.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.table_16x16
         Me.BarStaticItem1.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem1.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarStaticItem1.Name = "BarStaticItem1"
         Me.BarStaticItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
@@ -502,8 +502,8 @@ Partial Class MainForm
         '
         Me.oAddButton.Caption = "Add"
         Me.oAddButton.Id = 31
-        Me.oAddButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.add_16x16
-        Me.oAddButton.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.add_32x32
+        Me.oAddButton.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.add_16x16
+        Me.oAddButton.ImageOptions.LargeImage = Global.LTFFAlloc25.My.Resources.Resources.add_32x32
         Me.oAddButton.Name = "oAddButton"
         '
         'oDeleteButton
@@ -511,8 +511,8 @@ Partial Class MainForm
         Me.oDeleteButton.Caption = "Delete"
         Me.oDeleteButton.Enabled = False
         Me.oDeleteButton.Id = 32
-        Me.oDeleteButton.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.remove_16x16
-        Me.oDeleteButton.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.remove_32x32
+        Me.oDeleteButton.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.remove_16x16
+        Me.oDeleteButton.ImageOptions.LargeImage = Global.LTFFAlloc25.My.Resources.Resources.remove_32x32
         Me.oDeleteButton.Name = "oDeleteButton"
         '
         'BarEditItem1
@@ -902,7 +902,7 @@ Partial Class MainForm
         '
         Me.BarStaticItem2.Caption = "Options"
         Me.BarStaticItem2.Id = 26
-        Me.BarStaticItem2.ImageOptions.Image = Global.LTFFAlloc2.My.Resources.Resources.table_16x16
+        Me.BarStaticItem2.ImageOptions.Image = Global.LTFFAlloc25.My.Resources.Resources.table_16x16
         Me.BarStaticItem2.Name = "BarStaticItem2"
         Me.BarStaticItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '

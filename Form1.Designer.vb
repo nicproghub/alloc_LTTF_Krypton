@@ -52,7 +52,7 @@ Partial Class Form1
         Me.RnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RARBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ds = New LTFFAlloc2.ods()
+        Me.ds = New LTFFAlloc25.ods()
         Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
         Me.gvm = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
         Me.C1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -586,7 +586,7 @@ Partial Class Form1
         'ToolStripButton1
         '
         Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ToolStripButton1.Image = Global.LTFFAlloc2.My.Resources.Resources.open_32x32
+        Me.ToolStripButton1.Image = Global.LTFFAlloc25.My.Resources.Resources.open_32x32
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(133, 29)
@@ -599,7 +599,7 @@ Partial Class Form1
         '
         'oRefreshAllButton
         '
-        Me.oRefreshAllButton.Image = Global.LTFFAlloc2.My.Resources.Resources.refresh_16x16
+        Me.oRefreshAllButton.Image = Global.LTFFAlloc25.My.Resources.Resources.refresh_16x16
         Me.oRefreshAllButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oRefreshAllButton.Name = "oRefreshAllButton"
         Me.oRefreshAllButton.Size = New System.Drawing.Size(99, 29)
@@ -612,7 +612,7 @@ Partial Class Form1
         '
         'ToolStripButton3
         '
-        Me.ToolStripButton3.Image = Global.LTFFAlloc2.My.Resources.Resources._2010BlueContextMenuSub
+        Me.ToolStripButton3.Image = Global.LTFFAlloc25.My.Resources.Resources._2010BlueContextMenuSub
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
         Me.ToolStripButton3.Size = New System.Drawing.Size(167, 29)
@@ -626,7 +626,7 @@ Partial Class Form1
         'ToolStripButton4
         '
         Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PDFToolStripMenuItem, Me.ExcelToolStripMenuItem, Me.CSVToolStripMenuItem, Me.HTMLToolStripMenuItem})
-        Me.ToolStripButton4.Image = Global.LTFFAlloc2.My.Resources.Resources.export_32x32
+        Me.ToolStripButton4.Image = Global.LTFFAlloc25.My.Resources.Resources.export_32x32
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.Size = New System.Drawing.Size(109, 29)
@@ -663,7 +663,7 @@ Partial Class Form1
         '
         'ToolStripButton5
         '
-        Me.ToolStripButton5.Image = Global.LTFFAlloc2.My.Resources.Resources.add_32x32
+        Me.ToolStripButton5.Image = Global.LTFFAlloc25.My.Resources.Resources.add_32x32
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.Size = New System.Drawing.Size(75, 29)
@@ -672,7 +672,7 @@ Partial Class Form1
         '
         'ToolStripButton6
         '
-        Me.ToolStripButton6.Image = Global.LTFFAlloc2.My.Resources.Resources.remove_32x32
+        Me.ToolStripButton6.Image = Global.LTFFAlloc25.My.Resources.Resources.remove_32x32
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Size = New System.Drawing.Size(91, 29)

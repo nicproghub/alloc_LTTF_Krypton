@@ -1,0 +1,104 @@
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.Form1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.vbproj.CoreCompileInputs.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\app.mdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Data.Desktop.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Data.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Drawing.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Office.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Pdf.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Printing.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.RichEdit.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.RichEdit.v24.2.Export.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Utils.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraBars.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraEditors.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraGrid.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraLayout.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraPrinting.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Pdf.v24.2.Drawing.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Sparkline.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraTreeList.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Drawing.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Data.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Pdf.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Office.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.RichEdit.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Printing.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Data.Desktop.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Utils.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraBars.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraEditors.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraGrid.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraLayout.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraPrinting.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Pdf.v24.2.Drawing.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.Sparkline.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\DevExpress.XtraTreeList.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAllo.C5C826B4.Up2Date
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\LTFFAlloc25.exe.config
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\LTFFAlloc25.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\bin\Debug\LTFFAlloc25.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\app.mdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\LTFFAlloc25.exe.config
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\LTFFAlloc25.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\LTFFAlloc25.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Data.Desktop.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Data.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Drawing.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Office.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Pdf.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Printing.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Export.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Utils.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraBars.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraEditors.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraGrid.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraLayout.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraPrinting.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Pdf.v24.2.Drawing.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Sparkline.v24.2.Core.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraTreeList.v24.2.dll
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Drawing.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Data.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Pdf.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Office.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.RichEdit.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Printing.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Data.Desktop.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Utils.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraBars.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraEditors.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraGrid.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraLayout.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraPrinting.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Pdf.v24.2.Drawing.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.Sparkline.v24.2.Core.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\bin\Debug\DevExpress.XtraTreeList.v24.2.xml
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.Form1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.vbproj.CoreCompileInputs.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAllo.C5C826B4.Up2Date
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton - Copy\obj\Debug\LTFFAlloc25.pdb

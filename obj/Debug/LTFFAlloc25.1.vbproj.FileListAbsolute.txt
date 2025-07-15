@@ -1,0 +1,10 @@
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.1.vbproj.AssemblyReference.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.Form1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.MainForm.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.Resources.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.WaitForm1.resources
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.1.vbproj.GenerateResource.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc2.exe.licenses
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc25.1.vbproj.CoreCompileInputs.cache
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc2.exe
+C:\Users\Nicole\Desktop\StevenJob\Allocation App\LTFFAlloc2_Krypton\obj\Debug\LTFFAlloc2.pdb

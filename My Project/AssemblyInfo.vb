@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("LTFFAlloc2")>
+<Assembly: AssemblyTitle("LTFFAlloc25")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("LTFFAlloc2")>
+<Assembly: AssemblyProduct("LTFFAlloc25")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("80fd28fd-254a-4c0e-83da-368c4dc3550d")>
+<Assembly: Guid("80fd28fd-254a-4c0e-83da-368c4dc3551d")>
 
 ' Version information for an assembly consists of the following four values:
 '
