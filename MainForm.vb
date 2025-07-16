@@ -1690,4 +1690,11 @@ NotInheritable Class MainForm
 		oDeleteButton.Enabled = en
 	End Sub
 
+	Private Sub OfficeNavigationBar1_Click(sender As Object, e As EventArgs) Handles OfficeNavigationBar1.Click
+
+	End Sub
+
+	Private Sub fbd_HelpRequest(sender As Object, e As EventArgs) Handles fbd.HelpRequest
+
+	End Sub
 End Class

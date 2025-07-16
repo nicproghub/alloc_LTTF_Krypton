@@ -35,23 +35,20 @@ Partial Class Form1
         Me.gvr = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
         Me.F1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.F2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F4DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F5DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F6DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F7DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.F3DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F4DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F5DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F6DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F7DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F8DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F9DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F10DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F11DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F12DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F13DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F14DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F15DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F16DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RARBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.F9DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F10DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F11DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F12DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F13 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F15DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F16 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.bsRar = New System.Windows.Forms.BindingSource(Me.components)
         Me.ds = New LTFFAlloc25.ods()
         Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
         Me.gvm = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
@@ -68,32 +65,37 @@ Partial Class Form1
         Me.C21DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.C22DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.C23DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.MktSpecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ExchangeRateBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IndexMundiBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bsMkt = New System.Windows.Forms.BindingSource(Me.components)
         Me.KryptonPage5 = New ComponentFactory.Krypton.Navigator.KryptonPage()
         Me.gvo = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
         Me.colc110 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colc24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OptionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bsOptions = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.oSetFolderButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.oRefreshAllButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.oMktMciUpdateButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripSplitButton()
-        Me.PDFToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExcelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CSVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HTMLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.oExportButton = New System.Windows.Forms.ToolStripSplitButton()
+        Me.oRarExport_PDF = New System.Windows.Forms.ToolStripMenuItem()
+        Me.oRarExport_Excel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.oRarExport_Csv = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
+        Me.oAddButton = New System.Windows.Forms.ToolStripButton()
+        Me.oDeleteButton = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.oStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.oFolderLoc = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.bsExchange = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bsMundi = New System.Windows.Forms.BindingSource(Me.components)
+        Me.fbd = New System.Windows.Forms.FolderBrowserDialog()
+        Me.sfd = New System.Windows.Forms.SaveFileDialog()
+        Me.bwMkt = New System.ComponentModel.BackgroundWorker()
+        Me.bwCalc = New System.ComponentModel.BackgroundWorker()
+        Me.bwWeb = New System.ComponentModel.BackgroundWorker()
+        Me.bwRefresh = New System.ComponentModel.BackgroundWorker()
         CType(Me.mainPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mainPanel.SuspendLayout()
         CType(Me.KryptonNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,20 +103,20 @@ Partial Class Form1
         CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonPage1.SuspendLayout()
         CType(Me.gvr, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RARBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsRar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ds, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonPage2.SuspendLayout()
         CType(Me.gvm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MktSpecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExchangeRateBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IndexMundiBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsMkt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KryptonPage5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.KryptonPage5.SuspendLayout()
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OptionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsMundi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'mainPanel
@@ -148,7 +150,7 @@ Partial Class Form1
         Me.KryptonPage1.LastVisibleSet = True
         Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
         Me.KryptonPage1.Name = "KryptonPage1"
-        Me.KryptonPage1.Size = New System.Drawing.Size(1230, 519)
+        Me.KryptonPage1.Size = New System.Drawing.Size(1230, 515)
         Me.KryptonPage1.Text = "RAR"
         Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
         Me.KryptonPage1.UniqueName = "D182CA08210C473436A2AEE2C8FAA12E"
@@ -159,182 +161,207 @@ Partial Class Form1
         Me.gvr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.gvr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.gvr.ColumnHeadersHeight = 30
-        Me.gvr.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.F1DataGridViewTextBoxColumn, Me.F2DataGridViewTextBoxColumn, Me.F3DataGridViewTextBoxColumn, Me.F4DataGridViewTextBoxColumn, Me.F5DataGridViewTextBoxColumn, Me.F6DataGridViewTextBoxColumn, Me.F7DataGridViewTextBoxColumn, Me.F8DataGridViewTextBoxColumn, Me.F9DataGridViewTextBoxColumn, Me.F10DataGridViewTextBoxColumn, Me.F11DataGridViewTextBoxColumn, Me.F12DataGridViewTextBoxColumn, Me.F13DataGridViewTextBoxColumn, Me.F14DataGridViewTextBoxColumn, Me.F15DataGridViewTextBoxColumn, Me.F16DataGridViewTextBoxColumn, Me.RnDataGridViewTextBoxColumn, Me.ColorDataGridViewTextBoxColumn})
-        Me.gvr.DataSource = Me.RARBindingSource
+        Me.gvr.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.F1DataGridViewTextBoxColumn, Me.F2DataGridViewTextBoxColumn, Me.F3DataGridViewTextBoxColumn, Me.F4DataGridViewTextBoxColumn, Me.F5DataGridViewTextBoxColumn, Me.F6DataGridViewTextBoxColumn, Me.F7DataGridViewTextBoxColumn, Me.F8DataGridViewTextBoxColumn, Me.F9DataGridViewTextBoxColumn, Me.F10DataGridViewTextBoxColumn, Me.F11DataGridViewTextBoxColumn, Me.F12DataGridViewTextBoxColumn, Me.F13, Me.F15DataGridViewTextBoxColumn, Me.F16})
+        Me.gvr.DataSource = Me.bsRar
         Me.gvr.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvr.Location = New System.Drawing.Point(0, 0)
         Me.gvr.Name = "gvr"
         Me.gvr.ReadOnly = True
         Me.gvr.RowHeadersWidth = 30
-        Me.gvr.Size = New System.Drawing.Size(1230, 519)
+        Me.gvr.Size = New System.Drawing.Size(1230, 515)
         Me.gvr.TabIndex = 0
         '
         'F1DataGridViewTextBoxColumn
         '
         Me.F1DataGridViewTextBoxColumn.DataPropertyName = "F1"
-        Me.F1DataGridViewTextBoxColumn.HeaderText = "F1"
+        Me.F1DataGridViewTextBoxColumn.HeaderText = "File Name"
         Me.F1DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F1DataGridViewTextBoxColumn.Name = "F1DataGridViewTextBoxColumn"
         Me.F1DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F1DataGridViewTextBoxColumn.Width = 71
+        Me.F1DataGridViewTextBoxColumn.Width = 130
         '
         'F2DataGridViewTextBoxColumn
         '
         Me.F2DataGridViewTextBoxColumn.DataPropertyName = "F2"
-        Me.F2DataGridViewTextBoxColumn.HeaderText = "F2"
+        Me.F2DataGridViewTextBoxColumn.HeaderText = "Mkt Name"
         Me.F2DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F2DataGridViewTextBoxColumn.Name = "F2DataGridViewTextBoxColumn"
         Me.F2DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F2DataGridViewTextBoxColumn.Width = 71
+        Me.F2DataGridViewTextBoxColumn.Width = 135
         '
         'F3DataGridViewTextBoxColumn
         '
         Me.F3DataGridViewTextBoxColumn.DataPropertyName = "F3"
-        Me.F3DataGridViewTextBoxColumn.HeaderText = "F3"
+        Me.F3DataGridViewTextBoxColumn.DecimalPlaces = 2
+        Me.F3DataGridViewTextBoxColumn.HeaderText = "RAR1"
+        Me.F3DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F3DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {-159383552, 46653770, 5421, -2147483648})
         Me.F3DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F3DataGridViewTextBoxColumn.Name = "F3DataGridViewTextBoxColumn"
         Me.F3DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F3DataGridViewTextBoxColumn.Width = 71
+        Me.F3DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F3DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F3DataGridViewTextBoxColumn.ThousandsSeparator = True
+        Me.F3DataGridViewTextBoxColumn.Width = 96
         '
         'F4DataGridViewTextBoxColumn
         '
         Me.F4DataGridViewTextBoxColumn.DataPropertyName = "F4"
-        Me.F4DataGridViewTextBoxColumn.HeaderText = "F4"
+        Me.F4DataGridViewTextBoxColumn.DecimalPlaces = 2
+        Me.F4DataGridViewTextBoxColumn.HeaderText = "RAR2"
+        Me.F4DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F4DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
         Me.F4DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F4DataGridViewTextBoxColumn.Name = "F4DataGridViewTextBoxColumn"
         Me.F4DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F4DataGridViewTextBoxColumn.Width = 71
+        Me.F4DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F4DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F4DataGridViewTextBoxColumn.ThousandsSeparator = True
+        Me.F4DataGridViewTextBoxColumn.Width = 96
         '
         'F5DataGridViewTextBoxColumn
         '
         Me.F5DataGridViewTextBoxColumn.DataPropertyName = "F5"
-        Me.F5DataGridViewTextBoxColumn.HeaderText = "F5"
+        Me.F5DataGridViewTextBoxColumn.HeaderText = "$ATR[x]"
+        Me.F5DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F5DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
         Me.F5DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F5DataGridViewTextBoxColumn.Name = "F5DataGridViewTextBoxColumn"
         Me.F5DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F5DataGridViewTextBoxColumn.Width = 71
+        Me.F5DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F5DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F5DataGridViewTextBoxColumn.ThousandsSeparator = True
+        Me.F5DataGridViewTextBoxColumn.Width = 111
         '
         'F6DataGridViewTextBoxColumn
         '
         Me.F6DataGridViewTextBoxColumn.DataPropertyName = "F6"
-        Me.F6DataGridViewTextBoxColumn.HeaderText = "F6"
+        Me.F6DataGridViewTextBoxColumn.HeaderText = "Long MM Risk"
+        Me.F6DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F6DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
         Me.F6DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F6DataGridViewTextBoxColumn.Name = "F6DataGridViewTextBoxColumn"
         Me.F6DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F6DataGridViewTextBoxColumn.Width = 71
+        Me.F6DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F6DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F6DataGridViewTextBoxColumn.ThousandsSeparator = True
+        Me.F6DataGridViewTextBoxColumn.Width = 166
         '
         'F7DataGridViewTextBoxColumn
         '
         Me.F7DataGridViewTextBoxColumn.DataPropertyName = "F7"
-        Me.F7DataGridViewTextBoxColumn.HeaderText = "F7"
+        Me.F7DataGridViewTextBoxColumn.HeaderText = "Short MM Risk"
+        Me.F7DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F7DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
         Me.F7DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F7DataGridViewTextBoxColumn.Name = "F7DataGridViewTextBoxColumn"
         Me.F7DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F7DataGridViewTextBoxColumn.Width = 71
+        Me.F7DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F7DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F7DataGridViewTextBoxColumn.ThousandsSeparator = True
+        Me.F7DataGridViewTextBoxColumn.Width = 169
         '
         'F8DataGridViewTextBoxColumn
         '
         Me.F8DataGridViewTextBoxColumn.DataPropertyName = "F8"
-        Me.F8DataGridViewTextBoxColumn.HeaderText = "F8"
+        Me.F8DataGridViewTextBoxColumn.HeaderText = "Last Trading Date"
         Me.F8DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F8DataGridViewTextBoxColumn.Name = "F8DataGridViewTextBoxColumn"
         Me.F8DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F8DataGridViewTextBoxColumn.Width = 71
+        Me.F8DataGridViewTextBoxColumn.Width = 188
         '
         'F9DataGridViewTextBoxColumn
         '
         Me.F9DataGridViewTextBoxColumn.DataPropertyName = "F9"
-        Me.F9DataGridViewTextBoxColumn.HeaderText = "F9"
+        Me.F9DataGridViewTextBoxColumn.HeaderText = "Rank1"
+        Me.F9DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F9DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F9DataGridViewTextBoxColumn.Name = "F9DataGridViewTextBoxColumn"
         Me.F9DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F9DataGridViewTextBoxColumn.Width = 71
+        Me.F9DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F9DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F9DataGridViewTextBoxColumn.Width = 101
         '
         'F10DataGridViewTextBoxColumn
         '
         Me.F10DataGridViewTextBoxColumn.DataPropertyName = "F10"
-        Me.F10DataGridViewTextBoxColumn.HeaderText = "F10"
+        Me.F10DataGridViewTextBoxColumn.HeaderText = "Rank2"
+        Me.F10DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F10DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F10DataGridViewTextBoxColumn.Name = "F10DataGridViewTextBoxColumn"
         Me.F10DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F10DataGridViewTextBoxColumn.Width = 81
+        Me.F10DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F10DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F10DataGridViewTextBoxColumn.Width = 101
         '
         'F11DataGridViewTextBoxColumn
         '
         Me.F11DataGridViewTextBoxColumn.DataPropertyName = "F11"
-        Me.F11DataGridViewTextBoxColumn.HeaderText = "F11"
+        Me.F11DataGridViewTextBoxColumn.HeaderText = "Rank Group"
+        Me.F11DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F11DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F11DataGridViewTextBoxColumn.Name = "F11DataGridViewTextBoxColumn"
         Me.F11DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F11DataGridViewTextBoxColumn.Width = 81
+        Me.F11DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F11DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F11DataGridViewTextBoxColumn.Width = 146
         '
         'F12DataGridViewTextBoxColumn
         '
         Me.F12DataGridViewTextBoxColumn.DataPropertyName = "F12"
-        Me.F12DataGridViewTextBoxColumn.HeaderText = "F12"
+        Me.F12DataGridViewTextBoxColumn.DecimalPlaces = 4
+        Me.F12DataGridViewTextBoxColumn.HeaderText = "Alloc Weight (%)"
+        Me.F12DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {-1981284352, -1966660860, 0, 0})
         Me.F12DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F12DataGridViewTextBoxColumn.Name = "F12DataGridViewTextBoxColumn"
         Me.F12DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F12DataGridViewTextBoxColumn.Width = 81
+        Me.F12DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F12DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F12DataGridViewTextBoxColumn.Width = 182
         '
-        'F13DataGridViewTextBoxColumn
+        'F13
         '
-        Me.F13DataGridViewTextBoxColumn.DataPropertyName = "F13"
-        Me.F13DataGridViewTextBoxColumn.HeaderText = "F13"
-        Me.F13DataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.F13DataGridViewTextBoxColumn.Name = "F13DataGridViewTextBoxColumn"
-        Me.F13DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F13DataGridViewTextBoxColumn.Width = 81
-        '
-        'F14DataGridViewTextBoxColumn
-        '
-        Me.F14DataGridViewTextBoxColumn.DataPropertyName = "F14"
-        Me.F14DataGridViewTextBoxColumn.HeaderText = "F14"
-        Me.F14DataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.F14DataGridViewTextBoxColumn.Name = "F14DataGridViewTextBoxColumn"
-        Me.F14DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F14DataGridViewTextBoxColumn.Width = 81
+        Me.F13.DataPropertyName = "F13"
+        Me.F13.HeaderText = "#  Contracts"
+        Me.F13.MinimumWidth = 8
+        Me.F13.Name = "F13"
+        Me.F13.ReadOnly = True
+        Me.F13.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F13.Width = 148
         '
         'F15DataGridViewTextBoxColumn
         '
         Me.F15DataGridViewTextBoxColumn.DataPropertyName = "F15"
-        Me.F15DataGridViewTextBoxColumn.HeaderText = "F15"
+        Me.F15DataGridViewTextBoxColumn.DecimalPlaces = 2
+        Me.F15DataGridViewTextBoxColumn.HeaderText = "MktCMI (Buy)"
+        Me.F15DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
+        Me.F15DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
         Me.F15DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F15DataGridViewTextBoxColumn.Name = "F15DataGridViewTextBoxColumn"
         Me.F15DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F15DataGridViewTextBoxColumn.Width = 81
+        Me.F15DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F15DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F15DataGridViewTextBoxColumn.Width = 159
         '
-        'F16DataGridViewTextBoxColumn
+        'F16
         '
-        Me.F16DataGridViewTextBoxColumn.DataPropertyName = "F16"
-        Me.F16DataGridViewTextBoxColumn.HeaderText = "F16"
-        Me.F16DataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.F16DataGridViewTextBoxColumn.Name = "F16DataGridViewTextBoxColumn"
-        Me.F16DataGridViewTextBoxColumn.ReadOnly = True
-        Me.F16DataGridViewTextBoxColumn.Width = 81
+        Me.F16.DataPropertyName = "F16"
+        Me.F16.DecimalPlaces = 2
+        Me.F16.HeaderText = "MktCMI (Buy)"
+        Me.F16.Maximum = New Decimal(New Integer() {-559939584, 902409669, 54, 0})
+        Me.F16.Minimum = New Decimal(New Integer() {1241513984, 370409800, 542101, -2147483648})
+        Me.F16.MinimumWidth = 8
+        Me.F16.Name = "F16"
+        Me.F16.ReadOnly = True
+        Me.F16.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.F16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.F16.Width = 159
         '
-        'RnDataGridViewTextBoxColumn
+        'bsRar
         '
-        Me.RnDataGridViewTextBoxColumn.DataPropertyName = "rn"
-        Me.RnDataGridViewTextBoxColumn.HeaderText = "rn"
-        Me.RnDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.RnDataGridViewTextBoxColumn.Name = "RnDataGridViewTextBoxColumn"
-        Me.RnDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RnDataGridViewTextBoxColumn.Width = 68
-        '
-        'ColorDataGridViewTextBoxColumn
-        '
-        Me.ColorDataGridViewTextBoxColumn.DataPropertyName = "_color"
-        Me.ColorDataGridViewTextBoxColumn.HeaderText = "_color"
-        Me.ColorDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.ColorDataGridViewTextBoxColumn.Name = "ColorDataGridViewTextBoxColumn"
-        Me.ColorDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ColorDataGridViewTextBoxColumn.Width = 99
-        '
-        'RARBindingSource
-        '
-        Me.RARBindingSource.DataMember = "RAR"
-        Me.RARBindingSource.DataSource = Me.ds
+        Me.bsRar.DataMember = "RAR"
+        Me.bsRar.DataSource = Me.ds
         '
         'ds
         '
@@ -362,7 +389,7 @@ Partial Class Form1
         Me.gvm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.gvm.ColumnHeadersHeight = 30
         Me.gvm.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.C1DataGridViewTextBoxColumn, Me.C2DataGridViewTextBoxColumn, Me.C3DataGridViewTextBoxColumn, Me.C4DataGridViewTextBoxColumn, Me.C5DataGridViewTextBoxColumn, Me.C12DataGridViewTextBoxColumn, Me.C13DataGridViewTextBoxColumn, Me.C18DataGridViewTextBoxColumn, Me.C19DataGridViewTextBoxColumn, Me.C20DataGridViewTextBoxColumn, Me.C21DataGridViewTextBoxColumn, Me.C22DataGridViewTextBoxColumn, Me.C23DataGridViewTextBoxColumn})
-        Me.gvm.DataSource = Me.MktSpecBindingSource
+        Me.gvm.DataSource = Me.bsMkt
         Me.gvm.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvm.Location = New System.Drawing.Point(0, 0)
         Me.gvm.Name = "gvm"
@@ -496,20 +523,10 @@ Partial Class Form1
         Me.C23DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.C23DataGridViewTextBoxColumn.Width = 157
         '
-        'MktSpecBindingSource
+        'bsMkt
         '
-        Me.MktSpecBindingSource.DataMember = "MktSpec"
-        Me.MktSpecBindingSource.DataSource = Me.ds
-        '
-        'ExchangeRateBindingSource
-        '
-        Me.ExchangeRateBindingSource.DataMember = "ExchangeRate"
-        Me.ExchangeRateBindingSource.DataSource = Me.ds
-        '
-        'IndexMundiBindingSource
-        '
-        Me.IndexMundiBindingSource.DataMember = "IndexMundi"
-        Me.IndexMundiBindingSource.DataSource = Me.ds
+        Me.bsMkt.DataMember = "MktSpec"
+        Me.bsMkt.DataSource = Me.ds
         '
         'KryptonPage5
         '
@@ -533,7 +550,7 @@ Partial Class Form1
         Me.gvo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.gvo.ColumnHeadersHeight = 28
         Me.gvo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colc110, Me.colc24})
-        Me.gvo.DataSource = Me.OptionsBindingSource
+        Me.gvo.DataSource = Me.bsOptions
         Me.gvo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvo.Location = New System.Drawing.Point(0, 0)
         Me.gvo.Name = "gvo"
@@ -566,31 +583,31 @@ Partial Class Form1
         Me.colc24.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.colc24.Width = 200
         '
-        'OptionsBindingSource
+        'bsOptions
         '
-        Me.OptionsBindingSource.DataMember = "Options"
-        Me.OptionsBindingSource.DataSource = Me.ds
+        Me.bsOptions.DataMember = "Options"
+        Me.bsOptions.DataSource = Me.ds
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(0)
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(25, 25)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.oRefreshAllButton, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripSeparator3, Me.ToolStripButton4, Me.ToolStripSeparator4, Me.ToolStripButton5, Me.ToolStripButton6})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.oSetFolderButton, Me.ToolStripSeparator1, Me.oRefreshAllButton, Me.ToolStripSeparator2, Me.oMktMciUpdateButton, Me.ToolStripSeparator3, Me.oExportButton, Me.ToolStripSeparator4, Me.oAddButton, Me.oDeleteButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1232, 34)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'oSetFolderButton
         '
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ToolStripButton1.Image = Global.LTFFAlloc25.My.Resources.Resources.open_32x32
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(133, 29)
-        Me.ToolStripButton1.Text = "Set Folder..."
+        Me.oSetFolderButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.oSetFolderButton.Image = Global.LTFFAlloc25.My.Resources.Resources.open_32x32
+        Me.oSetFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.oSetFolderButton.Name = "oSetFolderButton"
+        Me.oSetFolderButton.Size = New System.Drawing.Size(133, 29)
+        Me.oSetFolderButton.Text = "Set Folder..."
         '
         'ToolStripSeparator1
         '
@@ -610,74 +627,70 @@ Partial Class Form1
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 34)
         '
-        'ToolStripButton3
+        'oMktMciUpdateButton
         '
-        Me.ToolStripButton3.Image = Global.LTFFAlloc25.My.Resources.Resources._2010BlueContextMenuSub
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(167, 29)
-        Me.ToolStripButton3.Text = "Update MktCMI"
+        Me.oMktMciUpdateButton.Image = Global.LTFFAlloc25.My.Resources.Resources._2010BlueContextMenuSub
+        Me.oMktMciUpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.oMktMciUpdateButton.Name = "oMktMciUpdateButton"
+        Me.oMktMciUpdateButton.Size = New System.Drawing.Size(167, 29)
+        Me.oMktMciUpdateButton.Text = "Update MktCMI"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 34)
         '
-        'ToolStripButton4
+        'oExportButton
         '
-        Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PDFToolStripMenuItem, Me.ExcelToolStripMenuItem, Me.CSVToolStripMenuItem, Me.HTMLToolStripMenuItem})
-        Me.ToolStripButton4.Image = Global.LTFFAlloc25.My.Resources.Resources.export_32x32
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(109, 29)
-        Me.ToolStripButton4.Text = "Export"
+        Me.oExportButton.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv})
+        Me.oExportButton.Image = Global.LTFFAlloc25.My.Resources.Resources.export_32x32
+        Me.oExportButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.oExportButton.Name = "oExportButton"
+        Me.oExportButton.Size = New System.Drawing.Size(140, 29)
+        Me.oExportButton.Text = "Export Rar"
         '
-        'PDFToolStripMenuItem
+        'oRarExport_PDF
         '
-        Me.PDFToolStripMenuItem.Name = "PDFToolStripMenuItem"
-        Me.PDFToolStripMenuItem.Size = New System.Drawing.Size(160, 34)
-        Me.PDFToolStripMenuItem.Text = "PDF"
+        Me.oRarExport_PDF.Name = "oRarExport_PDF"
+        Me.oRarExport_PDF.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_PDF.Text = "PDF"
         '
-        'ExcelToolStripMenuItem
+        'oRarExport_Excel
         '
-        Me.ExcelToolStripMenuItem.Name = "ExcelToolStripMenuItem"
-        Me.ExcelToolStripMenuItem.Size = New System.Drawing.Size(160, 34)
-        Me.ExcelToolStripMenuItem.Text = "Excel"
+        Me.oRarExport_Excel.Name = "oRarExport_Excel"
+        Me.oRarExport_Excel.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_Excel.Text = "Excel"
         '
-        'CSVToolStripMenuItem
+        'oRarExport_Csv
         '
-        Me.CSVToolStripMenuItem.Name = "CSVToolStripMenuItem"
-        Me.CSVToolStripMenuItem.Size = New System.Drawing.Size(160, 34)
-        Me.CSVToolStripMenuItem.Text = "CSV"
-        '
-        'HTMLToolStripMenuItem
-        '
-        Me.HTMLToolStripMenuItem.Name = "HTMLToolStripMenuItem"
-        Me.HTMLToolStripMenuItem.Size = New System.Drawing.Size(160, 34)
-        Me.HTMLToolStripMenuItem.Text = "HTML"
+        Me.oRarExport_Csv.Name = "oRarExport_Csv"
+        Me.oRarExport_Csv.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_Csv.Text = "CSV"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 34)
         '
-        'ToolStripButton5
+        'oAddButton
         '
-        Me.ToolStripButton5.Image = Global.LTFFAlloc25.My.Resources.Resources.add_32x32
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(75, 29)
-        Me.ToolStripButton5.Text = "Add"
-        Me.ToolStripButton5.Visible = False
+        Me.oAddButton.Enabled = False
+        Me.oAddButton.Image = Global.LTFFAlloc25.My.Resources.Resources.add_32x32
+        Me.oAddButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.oAddButton.Name = "oAddButton"
+        Me.oAddButton.Size = New System.Drawing.Size(75, 29)
+        Me.oAddButton.Text = "Add"
+        Me.oAddButton.Visible = False
         '
-        'ToolStripButton6
+        'oDeleteButton
         '
-        Me.ToolStripButton6.Image = Global.LTFFAlloc25.My.Resources.Resources.remove_32x32
-        Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(91, 29)
-        Me.ToolStripButton6.Text = "Delete"
-        Me.ToolStripButton6.Visible = False
+        Me.oDeleteButton.Enabled = False
+        Me.oDeleteButton.Image = Global.LTFFAlloc25.My.Resources.Resources.remove_32x32
+        Me.oDeleteButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.oDeleteButton.Name = "oDeleteButton"
+        Me.oDeleteButton.Size = New System.Drawing.Size(91, 29)
+        Me.oDeleteButton.Text = "Delete"
+        Me.oDeleteButton.Visible = False
         '
         'StatusStrip1
         '
@@ -712,6 +725,16 @@ Partial Class Form1
         Me.oFolderLoc.Text = "C:\Data"
         Me.oFolderLoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'bsExchange
+        '
+        Me.bsExchange.DataMember = "ExchangeRate"
+        Me.bsExchange.DataSource = Me.ds
+        '
+        'bsMundi
+        '
+        Me.bsMundi.DataMember = "IndexMundi"
+        Me.bsMundi.DataSource = Me.ds
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -728,22 +751,22 @@ Partial Class Form1
         CType(Me.KryptonPage1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonPage1.ResumeLayout(False)
         CType(Me.gvr, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RARBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsRar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ds, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KryptonPage2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonPage2.ResumeLayout(False)
         CType(Me.gvm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MktSpecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExchangeRateBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IndexMundiBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsMkt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KryptonPage5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.KryptonPage5.ResumeLayout(False)
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OptionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsMundi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -752,10 +775,10 @@ Partial Class Form1
     Friend WithEvents KryptonPage1 As ComponentFactory.Krypton.Navigator.KryptonPage
     Friend WithEvents KryptonPage2 As ComponentFactory.Krypton.Navigator.KryptonPage
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents oSetFolderButton As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents oRefreshAllButton As ToolStripButton
-    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents oMktMciUpdateButton As ToolStripButton
     Friend WithEvents KryptonPage5 As ComponentFactory.Krypton.Navigator.KryptonPage
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents oStatus As ToolStripStatusLabel
@@ -763,39 +786,18 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents gvr As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
     Friend WithEvents ds As ods
-    Friend WithEvents F1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F4DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F5DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F6DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F7DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F8DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F9DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F10DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F11DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F12DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F13DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F14DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F15DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F16DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ColorDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RARBindingSource As BindingSource
+    Friend WithEvents bsRar As BindingSource
     Friend WithEvents gvm As ComponentFactory.Krypton.Toolkit.KryptonDataGridView
-    Friend WithEvents MktSpecBindingSource As BindingSource
-    Friend WithEvents ExchangeRateBindingSource As BindingSource
-    Friend WithEvents IndexMundiBindingSource As BindingSource
-    Friend WithEvents OptionsBindingSource As BindingSource
+    Friend WithEvents bsMkt As BindingSource
+    Friend WithEvents bsExchange As BindingSource
+    Friend WithEvents bsMundi As BindingSource
+    Friend WithEvents bsOptions As BindingSource
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripButton4 As ToolStripSplitButton
-    Friend WithEvents PDFToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExcelToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CSVToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HTMLToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents oExportButton As ToolStripSplitButton
+    Friend WithEvents oRarExport_PDF As ToolStripMenuItem
+    Friend WithEvents oRarExport_Excel As ToolStripMenuItem
+    Friend WithEvents oRarExport_Csv As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents ToolStripButton5 As ToolStripButton
-    Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents mainPanel As Krypton.Toolkit.KryptonPanel
     Friend WithEvents C1DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents C2DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
@@ -817,4 +819,27 @@ Partial Class Form1
     Friend WithEvents C21DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents C22DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents C23DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents oAddButton As ToolStripButton
+    Friend WithEvents oDeleteButton As ToolStripButton
+    Friend WithEvents fbd As FolderBrowserDialog
+    Friend WithEvents sfd As SaveFileDialog
+    Friend WithEvents bwMkt As System.ComponentModel.BackgroundWorker
+    Friend WithEvents bwCalc As System.ComponentModel.BackgroundWorker
+    Friend WithEvents bwWeb As System.ComponentModel.BackgroundWorker
+    Friend WithEvents bwRefresh As System.ComponentModel.BackgroundWorker
+    Friend WithEvents F1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents F2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents F3DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F4DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F5DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F6DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F7DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F8DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents F9DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F10DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F11DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F12DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F13 As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F15DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F16 As KryptonDataGridViewNumericUpDownColumn
 End Class

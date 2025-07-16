@@ -3,58 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|LTFFAlloc25||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\my project\\assemblyinfo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:my project\\assemblyinfo.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:ods.xsd||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\my project\\settings.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|solutionrelative:my project\\settings.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2_krypton - copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2_krypton - copy\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|solutionrelative:ods.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2_krypton - copy\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|solutionrelative:mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2_krypton - copy\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|8998e48e-b89a-4034-b66e-353d8c1fdc2e"
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|solutionrelative:ods.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\my project\\settings.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc25.1.vbproj|solutionrelative:my project\\settings.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,78 +59,82 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LTFFAlloc25",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\LTFFAlloc25.vbproj",
-              "RelativeDocumentMoniker": "LTFFAlloc25.vbproj",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\LTFFAlloc25.vbproj",
-              "RelativeToolTip": "LTFFAlloc25.vbproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-14T12:38:39.132Z",
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb*",
+              "RelativeToolTip": "Form1.vb*",
+              "ViewState": "AgIAAAABAAAAAAAAAAAwwBEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T14:27:51.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Resources.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Resources.Designer.vb",
-              "RelativeDocumentMoniker": "My Project\\Resources.Designer.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Resources.Designer.vb",
-              "RelativeToolTip": "My Project\\Resources.Designer.vb",
-              "ViewState": "AgIAACYAAAAAAAAAAAA3wDMAAAAVAAAAAAAAAA==",
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb [Design]*",
+              "RelativeToolTip": "Form1.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:36:59.416Z"
+              "WhenOpened": "2025-07-15T14:25:46.824Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.vb",
+              "RelativeDocumentMoniker": "MainForm.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.vb [Design]",
+              "RelativeToolTip": "MainForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T14:25:16.83Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.vb",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.vb",
+              "RelativeDocumentMoniker": "MainForm.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.vb",
+              "RelativeToolTip": "MainForm.vb",
+              "ViewState": "AgIAAJAFAAAAAAAAAAAMwJsFAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T14:30:05.549Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.Designer.vb*",
+              "RelativeToolTip": "Form1.Designer.vb*",
+              "ViewState": "AgIAAMoAAAAAAAAAAIAwwMoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T14:27:48.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainForm.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.Designer.vb",
               "RelativeDocumentMoniker": "MainForm.Designer.vb",
               "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\MainForm.Designer.vb",
               "RelativeToolTip": "MainForm.Designer.vb",
-              "ViewState": "AgIAAIEDAAAAAAAAAAAkwIgDAABBAAAAAAAAAA==",
+              "ViewState": "AgIAABUBAAAAAAAAAAAMwBwBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:36:40.644Z"
+              "WhenOpened": "2025-07-14T12:36:40.644Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssemblyInfo.vb",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\AssemblyInfo.vb",
-              "RelativeDocumentMoniker": "My Project\\AssemblyInfo.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\My Project\\AssemblyInfo.vb*",
-              "RelativeToolTip": "..\\LTFFAlloc2_Krypton\\My Project\\AssemblyInfo.vb*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:36:35.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Application.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Application.Designer.vb",
-              "RelativeDocumentMoniker": "My Project\\Application.Designer.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Application.Designer.vb",
-              "RelativeToolTip": "My Project\\Application.Designer.vb",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAACIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:36:32.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ods.xsd",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
-              "RelativeDocumentMoniker": "ods.xsd",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
-              "RelativeToolTip": "ods.xsd",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-07-14T12:36:05.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "Form1.Designer.vb",
@@ -148,41 +142,7 @@
               "RelativeToolTip": "Form1.Designer.vb",
               "ViewState": "AgIAACcDAAAAAAAAAAAIwDQDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:33:28.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb",
-              "RelativeDocumentMoniker": "Form1.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton\\Form1.vb [Design]",
-              "RelativeToolTip": "..\\LTFFAlloc2_Krypton\\Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:33:28.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Settings.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Settings.Designer.vb",
-              "RelativeDocumentMoniker": "My Project\\Settings.Designer.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Settings.Designer.vb",
-              "RelativeToolTip": "My Project\\Settings.Designer.vb",
-              "ViewState": "AgIAAEYAAAAAAAAAAAD4v00AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-14T12:32:24.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ods.xsd",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
-              "RelativeDocumentMoniker": "ods.xsd",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
-              "RelativeToolTip": "ods.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-07-14T12:18:24.98Z"
+              "WhenOpened": "2025-07-11T06:29:30.553Z"
             },
             {
               "$type": "Document",
@@ -197,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
@@ -209,15 +169,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form1.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.Designer.vb",
-              "RelativeDocumentMoniker": "Form1.Designer.vb",
-              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\Form1.Designer.vb",
-              "RelativeToolTip": "Form1.Designer.vb",
-              "ViewState": "AgIAACcDAAAAAAAAAAAIwDQDAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ods.xsd",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
+              "RelativeDocumentMoniker": "ods.xsd",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\ods.xsd",
+              "RelativeToolTip": "ods.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-07-14T12:18:24.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Settings.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Settings.Designer.vb",
+              "RelativeDocumentMoniker": "My Project\\Settings.Designer.vb",
+              "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2_Krypton - Copy\\My Project\\Settings.Designer.vb",
+              "RelativeToolTip": "My Project\\Settings.Designer.vb",
+              "ViewState": "AgIAAEYAAAAAAAAAAAD4v00AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-11T06:29:30.553Z"
+              "WhenOpened": "2025-07-14T12:32:24.399Z"
             }
           ]
         }
