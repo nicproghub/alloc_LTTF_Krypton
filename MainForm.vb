@@ -70,7 +70,7 @@ NotInheritable Class MainForm
 				' vbCrLf = line break, dt.Rows.Find("RAR1")("c2") =look for c1 for "RAR1", then get c2 value for this Caption 
 				colF3.Caption = "RAR " & vbCrLf & dt.Rows.Find("RAR1")("c2")
 				colF4.Caption = "RAR " & vbCrLf & dt.Rows.Find("RAR2")("c2")
-				'colF5.Caption = "$ ATR[x]" & vbCrLf & dt.Rows.Find("ATR")("c2")
+				colF5.Caption = "$ ATR[x]" & vbCrLf & dt.Rows.Find("ATR")("c2")
 			Catch ex As Exception
 			End Try
 		End Using
@@ -206,7 +206,7 @@ NotInheritable Class MainForm
 			refreshColumnNames()
 
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -372,7 +372,7 @@ NotInheritable Class MainForm
 
 					If rmkt0 Is Nothing Then
 						x.RAR.Rows.Add(rRar)
-						XtraMessageBox.Show("Cannot find contract specification for " & fileName & ".", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+						MessageBox.Show("Cannot find contract specification for " & fileName & ".", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
 						Continue For
 					End If
 					bmktcmi = rmkt0.c22
@@ -691,7 +691,7 @@ NotInheritable Class MainForm
 								Next
 								If Not ff Then
 
-									XtraMessageBox.Show($"{rmkt1.c1} has open position, file not found!", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
+									MessageBox.Show($"{rmkt1.c1} has open position, file not found!", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
 									Continue For
 								End If
 
@@ -919,10 +919,10 @@ NotInheritable Class MainForm
 			x.Seconds.ToString().PadLeft(2, "0")
 
 		If em.Equals("") Then
-			XtraMessageBox.Show("Job completed successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MessageBox.Show("Job completed successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
 			oRefreshAllButton.PerformClick()
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1101,7 +1101,7 @@ NotInheritable Class MainForm
 				Catch ex As Exception
 					' If IndexMundi fails, continue without updating
 					webem = "IndexMundi data not updated: " & ex.Message
-					Me.Invoke(Sub() XtraMessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
+					Me.Invoke(Sub() MessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
 				End Try
 				' update ExchangeRate page
 				'	WWSetCaption("ExchangeRate")
@@ -1164,7 +1164,7 @@ NotInheritable Class MainForm
 				Catch ex As Exception
 					' If exchange rate fails, continue without updating
 					webem = "Exchange rate data not updated: " & ex.Message
-					Me.Invoke(Sub() XtraMessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
+					Me.Invoke(Sub() MessageBox.Show(webem, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning))
 				End Try
 			Catch ex As Exception
 				em = ex.Message
@@ -1180,7 +1180,7 @@ NotInheritable Class MainForm
 			bwMkt.RunWorkerAsync()
 		Else
 			WWHide()
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1290,7 +1290,7 @@ NotInheritable Class MainForm
 			bwCalc.RunWorkerAsync({True})
 		Else
 			WWHide()
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1355,9 +1355,9 @@ NotInheritable Class MainForm
 		End Using
 
 		If em.Equals("") Then
-			XtraMessageBox.Show("Data saved successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MessageBox.Show("Data saved successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1423,9 +1423,9 @@ NotInheritable Class MainForm
 
 		If em.Equals("") Then
 			refreshColumnNames()
-			XtraMessageBox.Show("Data saved successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
+			MessageBox.Show("Data saved successfully.", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Information)
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1545,7 +1545,7 @@ NotInheritable Class MainForm
 						' if add "b" or "s" position
 						If e.Value = "" OrElse (eval <> "b" AndAlso eval <> "s") Then
 							If e.Value <> "" Then
-								XtraMessageBox.Show("Please input 'B' or 'S' values only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+								MessageBox.Show("Please input 'B' or 'S' values only.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 							End If
 							' if delete position
 							r.Setc19Null()
@@ -1571,7 +1571,7 @@ NotInheritable Class MainForm
 					Else
 						If e.Value IsNot DBNull.Value Then
 							r.Setc19Null()
-							XtraMessageBox.Show("No AllocWt Value is found in RAR", "AllocWt not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+							MessageBox.Show("No AllocWt Value is found in RAR", "AllocWt not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 							Dim cmd As OleDbCommand = cn.NewCommand("UPDATE mktspec SET c19 = ? WHERE rn = ?")
 							cmd.Parameters.AddWithValue("@c19", If(r.Isc19Null(), DBNull.Value, r.c19))
 							cmd.Parameters.AddWithValue("@rn", r.rn)
@@ -1589,31 +1589,9 @@ NotInheritable Class MainForm
 
 		End Using
 
-		If Not em.Equals("") Then XtraMessageBox.Show(em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+		If Not em.Equals("") Then MessageBox.Show(em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 	End Sub
 
-	Private Sub _gvo_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles gvo.CellValueChanged
-		' get the row 
-		Dim r As ods.OptionsRow = gvo.GetDataRow(e.RowHandle)
-		Dim em As String = ""
-		Using cn As New MsAccess
-			Try
-				cn.Open()
-				Dim w As New System.Text.StringBuilder
-				w.Append("update [Options] set ")
-				w.Append(e.Column.FieldName & " = '" & e.Value & "'")
-				w.Append(" where rn = " & r.rn)
-
-				cn.NewCommand(w.ToString()).ExecuteNonQuery()
-
-			Catch ex As Exception
-				em = ex.Message
-			Finally
-				refreshColumnNames()
-			End Try
-
-		End Using
-	End Sub
 
 	Private Sub oAddButton_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oAddButton.ItemClick
 		Dim em As String = ""
@@ -1656,7 +1634,7 @@ NotInheritable Class MainForm
 
 		If em.Equals("") Then
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1681,7 +1659,7 @@ NotInheritable Class MainForm
 
 		If em.Equals("") Then
 		Else
-			XtraMessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+			MessageBox.Show(JOB_FAILED & em, Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
 		End If
 	End Sub
 
@@ -1690,11 +1668,27 @@ NotInheritable Class MainForm
 		oDeleteButton.Enabled = en
 	End Sub
 
-	Private Sub OfficeNavigationBar1_Click(sender As Object, e As EventArgs) Handles OfficeNavigationBar1.Click
+	Private Sub _gvo_CellValueChanged(sender As Object, e As CellValueChangedEventArgs) Handles gvo.CellValueChanged
+		' get the row 
+		Dim r As ods.OptionsRow = gvo.GetDataRow(e.RowHandle)
+		Dim em As String = ""
+		Using cn As New MsAccess
+			Try
+				cn.Open()
+				Dim w As New System.Text.StringBuilder
+				w.Append("update [Options] set ")
+				w.Append(e.Column.FieldName & " = '" & e.Value & "'")
+				w.Append(" where rn = " & r.rn)
 
+				cn.NewCommand(w.ToString()).ExecuteNonQuery()
+
+			Catch ex As Exception
+				em = ex.Message
+			Finally
+				refreshColumnNames()
+			End Try
+
+		End Using
 	End Sub
 
-	Private Sub fbd_HelpRequest(sender As Object, e As EventArgs) Handles fbd.HelpRequest
-
-	End Sub
 End Class

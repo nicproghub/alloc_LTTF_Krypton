@@ -27,15 +27,34 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle79 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle80 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle81 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle82 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle83 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle84 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.mainPanel = New ComponentFactory.Krypton.Toolkit.KryptonPanel()
         Me.KryptonNavigator1 = New ComponentFactory.Krypton.Navigator.KryptonNavigator()
         Me.KryptonPage1 = New ComponentFactory.Krypton.Navigator.KryptonPage()
         Me.gvr = New ComponentFactory.Krypton.Toolkit.KryptonDataGridView()
         Me.F1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.F2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.F3DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.F4DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F5DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F6DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
@@ -44,10 +63,11 @@ Partial Class Form1
         Me.F9DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F10DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F11DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.F12DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.F12DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.F13 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F15DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.F16 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.Column1 = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.bsRar = New System.Windows.Forms.BindingSource(Me.components)
         Me.ds = New LTFFAlloc25.ods()
         Me.KryptonPage2 = New ComponentFactory.Krypton.Navigator.KryptonPage()
@@ -55,14 +75,14 @@ Partial Class Form1
         Me.C1DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C2DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C3DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C4DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.C5DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.C4DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.C5DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C12DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C13DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.C18DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C19DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C20DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
-        Me.C21DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
+        Me.C21DataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.C22DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.C23DataGridViewTextBoxColumn = New ComponentFactory.Krypton.Toolkit.KryptonDataGridViewNumericUpDownColumn()
         Me.bsMkt = New System.Windows.Forms.BindingSource(Me.components)
@@ -134,11 +154,11 @@ Partial Class Form1
         '
         Me.KryptonNavigator1.Bar.ItemSizing = ComponentFactory.Krypton.Navigator.BarItemSizing.SameWidth
         Me.KryptonNavigator1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 34)
+        Me.KryptonNavigator1.Location = New System.Drawing.Point(0, 38)
         Me.KryptonNavigator1.Name = "KryptonNavigator1"
         Me.KryptonNavigator1.Pages.AddRange(New ComponentFactory.Krypton.Navigator.KryptonPage() {Me.KryptonPage1, Me.KryptonPage2, Me.KryptonPage5})
-        Me.KryptonNavigator1.SelectedIndex = 2
-        Me.KryptonNavigator1.Size = New System.Drawing.Size(1232, 555)
+        Me.KryptonNavigator1.SelectedIndex = 1
+        Me.KryptonNavigator1.Size = New System.Drawing.Size(1232, 551)
         Me.KryptonNavigator1.TabIndex = 1
         Me.KryptonNavigator1.Text = "KryptonNavigator1"
         '
@@ -150,25 +170,26 @@ Partial Class Form1
         Me.KryptonPage1.LastVisibleSet = True
         Me.KryptonPage1.MinimumSize = New System.Drawing.Size(50, 50)
         Me.KryptonPage1.Name = "KryptonPage1"
-        Me.KryptonPage1.Size = New System.Drawing.Size(1230, 515)
+        Me.KryptonPage1.Size = New System.Drawing.Size(1230, 519)
         Me.KryptonPage1.Text = "RAR"
         Me.KryptonPage1.ToolTipTitle = "Page ToolTip"
         Me.KryptonPage1.UniqueName = "D182CA08210C473436A2AEE2C8FAA12E"
         '
         'gvr
         '
+        Me.gvr.AllowUserToAddRows = False
         Me.gvr.AutoGenerateColumns = False
         Me.gvr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.gvr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.gvr.ColumnHeadersHeight = 30
-        Me.gvr.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.F1DataGridViewTextBoxColumn, Me.F2DataGridViewTextBoxColumn, Me.F3DataGridViewTextBoxColumn, Me.F4DataGridViewTextBoxColumn, Me.F5DataGridViewTextBoxColumn, Me.F6DataGridViewTextBoxColumn, Me.F7DataGridViewTextBoxColumn, Me.F8DataGridViewTextBoxColumn, Me.F9DataGridViewTextBoxColumn, Me.F10DataGridViewTextBoxColumn, Me.F11DataGridViewTextBoxColumn, Me.F12DataGridViewTextBoxColumn, Me.F13, Me.F15DataGridViewTextBoxColumn, Me.F16})
+        Me.gvr.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.F1DataGridViewTextBoxColumn, Me.F2DataGridViewTextBoxColumn, Me.F3DataGridViewTextBoxColumn, Me.F4DataGridViewTextBoxColumn, Me.F5DataGridViewTextBoxColumn, Me.F6DataGridViewTextBoxColumn, Me.F7DataGridViewTextBoxColumn, Me.F8DataGridViewTextBoxColumn, Me.F9DataGridViewTextBoxColumn, Me.F10DataGridViewTextBoxColumn, Me.F11DataGridViewTextBoxColumn, Me.F12DataGridViewTextBoxColumn, Me.F13, Me.F15DataGridViewTextBoxColumn, Me.F16, Me.Column1})
         Me.gvr.DataSource = Me.bsRar
         Me.gvr.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvr.Location = New System.Drawing.Point(0, 0)
         Me.gvr.Name = "gvr"
         Me.gvr.ReadOnly = True
         Me.gvr.RowHeadersWidth = 30
-        Me.gvr.Size = New System.Drawing.Size(1230, 515)
+        Me.gvr.Size = New System.Drawing.Size(1230, 519)
         Me.gvr.TabIndex = 0
         '
         'F1DataGridViewTextBoxColumn
@@ -191,23 +212,24 @@ Partial Class Form1
         '
         'F3DataGridViewTextBoxColumn
         '
+        Me.F3DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F3DataGridViewTextBoxColumn.DataPropertyName = "F3"
-        Me.F3DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle71.Format = "N3"
+        Me.F3DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle71
         Me.F3DataGridViewTextBoxColumn.HeaderText = "RAR1"
-        Me.F3DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
-        Me.F3DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {-159383552, 46653770, 5421, -2147483648})
         Me.F3DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F3DataGridViewTextBoxColumn.Name = "F3DataGridViewTextBoxColumn"
         Me.F3DataGridViewTextBoxColumn.ReadOnly = True
         Me.F3DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.F3DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.F3DataGridViewTextBoxColumn.ThousandsSeparator = True
         Me.F3DataGridViewTextBoxColumn.Width = 96
         '
         'F4DataGridViewTextBoxColumn
         '
+        Me.F4DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F4DataGridViewTextBoxColumn.DataPropertyName = "F4"
         Me.F4DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle72.Format = "N3"
+        Me.F4DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle72
         Me.F4DataGridViewTextBoxColumn.HeaderText = "RAR2"
         Me.F4DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F4DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
@@ -222,6 +244,9 @@ Partial Class Form1
         'F5DataGridViewTextBoxColumn
         '
         Me.F5DataGridViewTextBoxColumn.DataPropertyName = "F5"
+        DataGridViewCellStyle73.Format = "N2"
+        DataGridViewCellStyle73.NullValue = Nothing
+        Me.F5DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle73
         Me.F5DataGridViewTextBoxColumn.HeaderText = "$ATR[x]"
         Me.F5DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F5DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
@@ -236,6 +261,9 @@ Partial Class Form1
         'F6DataGridViewTextBoxColumn
         '
         Me.F6DataGridViewTextBoxColumn.DataPropertyName = "F6"
+        DataGridViewCellStyle74.Format = "N0"
+        DataGridViewCellStyle74.NullValue = Nothing
+        Me.F6DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle74
         Me.F6DataGridViewTextBoxColumn.HeaderText = "Long MM Risk"
         Me.F6DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F6DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
@@ -250,6 +278,8 @@ Partial Class Form1
         'F7DataGridViewTextBoxColumn
         '
         Me.F7DataGridViewTextBoxColumn.DataPropertyName = "F7"
+        DataGridViewCellStyle75.Format = "N0"
+        Me.F7DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle75
         Me.F7DataGridViewTextBoxColumn.HeaderText = "Short MM Risk"
         Me.F7DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F7DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
@@ -272,7 +302,10 @@ Partial Class Form1
         '
         'F9DataGridViewTextBoxColumn
         '
+        Me.F9DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F9DataGridViewTextBoxColumn.DataPropertyName = "F9"
+        DataGridViewCellStyle76.Format = "N0"
+        Me.F9DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle76
         Me.F9DataGridViewTextBoxColumn.HeaderText = "Rank1"
         Me.F9DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F9DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -284,7 +317,10 @@ Partial Class Form1
         '
         'F10DataGridViewTextBoxColumn
         '
+        Me.F10DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F10DataGridViewTextBoxColumn.DataPropertyName = "F10"
+        DataGridViewCellStyle77.Format = "N0"
+        Me.F10DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle77
         Me.F10DataGridViewTextBoxColumn.HeaderText = "Rank2"
         Me.F10DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F10DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -296,7 +332,10 @@ Partial Class Form1
         '
         'F11DataGridViewTextBoxColumn
         '
+        Me.F11DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F11DataGridViewTextBoxColumn.DataPropertyName = "F11"
+        DataGridViewCellStyle78.Format = "N0"
+        Me.F11DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle78
         Me.F11DataGridViewTextBoxColumn.HeaderText = "Rank Group"
         Me.F11DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F11DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -308,20 +347,22 @@ Partial Class Form1
         '
         'F12DataGridViewTextBoxColumn
         '
+        Me.F12DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.F12DataGridViewTextBoxColumn.DataPropertyName = "F12"
-        Me.F12DataGridViewTextBoxColumn.DecimalPlaces = 4
+        DataGridViewCellStyle79.Format = "N2"
+        Me.F12DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle79
         Me.F12DataGridViewTextBoxColumn.HeaderText = "Alloc Weight (%)"
-        Me.F12DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {-1981284352, -1966660860, 0, 0})
         Me.F12DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.F12DataGridViewTextBoxColumn.Name = "F12DataGridViewTextBoxColumn"
         Me.F12DataGridViewTextBoxColumn.ReadOnly = True
         Me.F12DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.F12DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.F12DataGridViewTextBoxColumn.Width = 182
         '
         'F13
         '
         Me.F13.DataPropertyName = "F13"
+        DataGridViewCellStyle80.Format = "N0"
+        Me.F13.DefaultCellStyle = DataGridViewCellStyle80
         Me.F13.HeaderText = "#  Contracts"
         Me.F13.MinimumWidth = 8
         Me.F13.Name = "F13"
@@ -334,6 +375,8 @@ Partial Class Form1
         '
         Me.F15DataGridViewTextBoxColumn.DataPropertyName = "F15"
         Me.F15DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle81.Format = "N2"
+        Me.F15DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle81
         Me.F15DataGridViewTextBoxColumn.HeaderText = "MktCMI (Buy)"
         Me.F15DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {268435456, 1042612833, 542101086, 0})
         Me.F15DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {268435456, 1042612833, 542101086, -2147483648})
@@ -348,6 +391,8 @@ Partial Class Form1
         '
         Me.F16.DataPropertyName = "F16"
         Me.F16.DecimalPlaces = 2
+        DataGridViewCellStyle82.Format = "N2"
+        Me.F16.DefaultCellStyle = DataGridViewCellStyle82
         Me.F16.HeaderText = "MktCMI (Buy)"
         Me.F16.Maximum = New Decimal(New Integer() {-559939584, 902409669, 54, 0})
         Me.F16.Minimum = New Decimal(New Integer() {1241513984, 370409800, 542101, -2147483648})
@@ -357,6 +402,19 @@ Partial Class Form1
         Me.F16.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.F16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.F16.Width = 159
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "_color"
+        Me.Column1.HeaderText = "_color"
+        Me.Column1.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.Column1.MinimumWidth = 8
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Column1.Visible = False
+        Me.Column1.Width = 99
         '
         'bsRar
         '
@@ -377,13 +435,14 @@ Partial Class Form1
         Me.KryptonPage2.LastVisibleSet = True
         Me.KryptonPage2.MinimumSize = New System.Drawing.Size(50, 50)
         Me.KryptonPage2.Name = "KryptonPage2"
-        Me.KryptonPage2.Size = New System.Drawing.Size(1230, 519)
+        Me.KryptonPage2.Size = New System.Drawing.Size(1230, 515)
         Me.KryptonPage2.Text = "MktSpec"
         Me.KryptonPage2.ToolTipTitle = "Page ToolTip"
         Me.KryptonPage2.UniqueName = "D73F1584A33D482AC88125F64B8625EC"
         '
         'gvm
         '
+        Me.gvm.AllowUserToAddRows = False
         Me.gvm.AutoGenerateColumns = False
         Me.gvm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.gvm.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
@@ -395,11 +454,12 @@ Partial Class Form1
         Me.gvm.Name = "gvm"
         Me.gvm.RowHeadersWidth = 30
         Me.gvm.RowTemplate.Height = 28
-        Me.gvm.Size = New System.Drawing.Size(1230, 519)
+        Me.gvm.Size = New System.Drawing.Size(1230, 515)
         Me.gvm.TabIndex = 0
         '
         'C1DataGridViewTextBoxColumn
         '
+        Me.C1DataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.C1DataGridViewTextBoxColumn.DataPropertyName = "c1"
         Me.C1DataGridViewTextBoxColumn.HeaderText = "File Name"
         Me.C1DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -417,6 +477,8 @@ Partial Class Form1
         'C3DataGridViewTextBoxColumn
         '
         Me.C3DataGridViewTextBoxColumn.DataPropertyName = "c3"
+        DataGridViewCellStyle64.Format = "N2"
+        Me.C3DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle64
         Me.C3DataGridViewTextBoxColumn.HeaderText = "Point Value $Local"
         Me.C3DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C3DataGridViewTextBoxColumn.Name = "C3DataGridViewTextBoxColumn"
@@ -426,21 +488,28 @@ Partial Class Form1
         'C4DataGridViewTextBoxColumn
         '
         Me.C4DataGridViewTextBoxColumn.DataPropertyName = "c4"
+        Me.C4DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle65.Format = "N2"
+        Me.C4DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle65
         Me.C4DataGridViewTextBoxColumn.HeaderText = "Point Value $US"
+        Me.C4DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {-469762048, -590869294, 5421010, 0})
+        Me.C4DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {-469762048, -590869294, 5421010, -2147483648})
         Me.C4DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C4DataGridViewTextBoxColumn.Name = "C4DataGridViewTextBoxColumn"
         Me.C4DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.C4DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.C4DataGridViewTextBoxColumn.ThousandsSeparator = True
         Me.C4DataGridViewTextBoxColumn.Width = 176
         '
         'C5DataGridViewTextBoxColumn
         '
         Me.C5DataGridViewTextBoxColumn.DataPropertyName = "c5"
-        Me.C5DataGridViewTextBoxColumn.DecimalPlaces = 6
+        DataGridViewCellStyle66.NullValue = Nothing
+        Me.C5DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle66
         Me.C5DataGridViewTextBoxColumn.HeaderText = "Min Tick"
         Me.C5DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C5DataGridViewTextBoxColumn.Name = "C5DataGridViewTextBoxColumn"
         Me.C5DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.C5DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.C5DataGridViewTextBoxColumn.Width = 117
         '
         'C12DataGridViewTextBoxColumn
@@ -454,8 +523,9 @@ Partial Class Form1
         'C13DataGridViewTextBoxColumn
         '
         Me.C13DataGridViewTextBoxColumn.DataPropertyName = "c13"
-        Me.C13DataGridViewTextBoxColumn.DecimalPlaces = 4
+        Me.C13DataGridViewTextBoxColumn.DecimalPlaces = 5
         Me.C13DataGridViewTextBoxColumn.HeaderText = "Ex Rate"
+        Me.C13DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
         Me.C13DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C13DataGridViewTextBoxColumn.Name = "C13DataGridViewTextBoxColumn"
         Me.C13DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
@@ -481,6 +551,8 @@ Partial Class Form1
         'C20DataGridViewTextBoxColumn
         '
         Me.C20DataGridViewTextBoxColumn.DataPropertyName = "c20"
+        DataGridViewCellStyle67.Format = "N0"
+        Me.C20DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle67
         Me.C20DataGridViewTextBoxColumn.HeaderText = "# of Contract"
         Me.C20DataGridViewTextBoxColumn.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.C20DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -492,18 +564,20 @@ Partial Class Form1
         'C21DataGridViewTextBoxColumn
         '
         Me.C21DataGridViewTextBoxColumn.DataPropertyName = "c21"
-        Me.C21DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle68.Format = "N2"
+        Me.C21DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle68
         Me.C21DataGridViewTextBoxColumn.HeaderText = "Alloc Weight (Wt)"
         Me.C21DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C21DataGridViewTextBoxColumn.Name = "C21DataGridViewTextBoxColumn"
         Me.C21DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.C21DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.C21DataGridViewTextBoxColumn.Width = 190
         '
         'C22DataGridViewTextBoxColumn
         '
         Me.C22DataGridViewTextBoxColumn.DataPropertyName = "c22"
         Me.C22DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle69.Format = "N2"
+        Me.C22DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle69
         Me.C22DataGridViewTextBoxColumn.HeaderText = "MktCMI (Buy)"
         Me.C22DataGridViewTextBoxColumn.MinimumWidth = 8
         Me.C22DataGridViewTextBoxColumn.Name = "C22DataGridViewTextBoxColumn"
@@ -515,6 +589,8 @@ Partial Class Form1
         '
         Me.C23DataGridViewTextBoxColumn.DataPropertyName = "c23"
         Me.C23DataGridViewTextBoxColumn.DecimalPlaces = 2
+        DataGridViewCellStyle70.Format = "N2"
+        Me.C23DataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle70
         Me.C23DataGridViewTextBoxColumn.HeaderText = "MktCMI (Sell)"
         Me.C23DataGridViewTextBoxColumn.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
         Me.C23DataGridViewTextBoxColumn.MinimumWidth = 8
@@ -564,8 +640,8 @@ Partial Class Form1
         '
         Me.colc110.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.colc110.DataPropertyName = "c1"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colc110.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colc110.DefaultCellStyle = DataGridViewCellStyle83
         Me.colc110.HeaderText = "ID"
         Me.colc110.MinimumWidth = 8
         Me.colc110.Name = "colc110"
@@ -575,8 +651,8 @@ Partial Class Form1
         '
         Me.colc24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.colc24.DataPropertyName = "c2"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.colc24.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.colc24.DefaultCellStyle = DataGridViewCellStyle84
         Me.colc24.HeaderText = "Value"
         Me.colc24.MinimumWidth = 8
         Me.colc24.Name = "colc24"
@@ -596,7 +672,7 @@ Partial Class Form1
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.oSetFolderButton, Me.ToolStripSeparator1, Me.oRefreshAllButton, Me.ToolStripSeparator2, Me.oMktMciUpdateButton, Me.ToolStripSeparator3, Me.oExportButton, Me.ToolStripSeparator4, Me.oAddButton, Me.oDeleteButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1232, 34)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1232, 38)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -606,39 +682,39 @@ Partial Class Form1
         Me.oSetFolderButton.Image = Global.LTFFAlloc25.My.Resources.Resources.open_32x32
         Me.oSetFolderButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oSetFolderButton.Name = "oSetFolderButton"
-        Me.oSetFolderButton.Size = New System.Drawing.Size(133, 29)
+        Me.oSetFolderButton.Size = New System.Drawing.Size(133, 33)
         Me.oSetFolderButton.Text = "Set Folder..."
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 34)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
         '
         'oRefreshAllButton
         '
         Me.oRefreshAllButton.Image = Global.LTFFAlloc25.My.Resources.Resources.refresh_16x16
         Me.oRefreshAllButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oRefreshAllButton.Name = "oRefreshAllButton"
-        Me.oRefreshAllButton.Size = New System.Drawing.Size(99, 29)
+        Me.oRefreshAllButton.Size = New System.Drawing.Size(99, 33)
         Me.oRefreshAllButton.Text = "Refresh"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 34)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'oMktMciUpdateButton
         '
         Me.oMktMciUpdateButton.Image = Global.LTFFAlloc25.My.Resources.Resources._2010BlueContextMenuSub
         Me.oMktMciUpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oMktMciUpdateButton.Name = "oMktMciUpdateButton"
-        Me.oMktMciUpdateButton.Size = New System.Drawing.Size(167, 29)
+        Me.oMktMciUpdateButton.Size = New System.Drawing.Size(167, 33)
         Me.oMktMciUpdateButton.Text = "Update MktCMI"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 34)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
         '
         'oExportButton
         '
@@ -646,35 +722,34 @@ Partial Class Form1
         Me.oExportButton.Image = Global.LTFFAlloc25.My.Resources.Resources.export_32x32
         Me.oExportButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oExportButton.Name = "oExportButton"
-        Me.oExportButton.Size = New System.Drawing.Size(140, 29)
+        Me.oExportButton.Size = New System.Drawing.Size(140, 33)
         Me.oExportButton.Text = "Export Rar"
         '
         'oRarExport_PDF
         '
         Me.oRarExport_PDF.Name = "oRarExport_PDF"
-        Me.oRarExport_PDF.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_PDF.Size = New System.Drawing.Size(152, 34)
         Me.oRarExport_PDF.Text = "PDF"
         '
         'oRarExport_Excel
         '
         Me.oRarExport_Excel.Name = "oRarExport_Excel"
-        Me.oRarExport_Excel.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_Excel.Size = New System.Drawing.Size(152, 34)
         Me.oRarExport_Excel.Text = "Excel"
         '
         'oRarExport_Csv
         '
         Me.oRarExport_Csv.Name = "oRarExport_Csv"
-        Me.oRarExport_Csv.Size = New System.Drawing.Size(270, 34)
+        Me.oRarExport_Csv.Size = New System.Drawing.Size(152, 34)
         Me.oRarExport_Csv.Text = "CSV"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 34)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 38)
         '
         'oAddButton
         '
-        Me.oAddButton.Enabled = False
         Me.oAddButton.Image = Global.LTFFAlloc25.My.Resources.Resources.add_32x32
         Me.oAddButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.oAddButton.Name = "oAddButton"
@@ -699,7 +774,7 @@ Partial Class Form1
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 589)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1232, 32)
+        Me.StatusStrip1.Size = New System.Drawing.Size(800, 32)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -708,7 +783,7 @@ Partial Class Form1
         '
         Me.oStatus.AutoSize = False
         Me.oStatus.Name = "oStatus"
-        Me.oStatus.Size = New System.Drawing.Size(1052, 25)
+        Me.oStatus.Size = New System.Drawing.Size(500, 25)
         Me.oStatus.Spring = True
         Me.oStatus.Text = "Ready"
         Me.oStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -734,6 +809,15 @@ Partial Class Form1
         '
         Me.bsMundi.DataMember = "IndexMundi"
         Me.bsMundi.DataSource = Me.ds
+        '
+        'bwMkt
+        '
+        '
+        'bwCalc
+        '
+        '
+        'bwWeb
+        '
         '
         'Form1
         '
@@ -806,19 +890,6 @@ Partial Class Form1
     Friend WithEvents C2DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents colc110 As DataGridViewTextBoxColumn
     Friend WithEvents colc24 As DataGridViewTextBoxColumn
-    Friend WithEvents C1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C4DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C5DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents C12DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C13DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents C18DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C19DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents C20DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents C21DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents C22DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents C23DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents oAddButton As ToolStripButton
     Friend WithEvents oDeleteButton As ToolStripButton
     Friend WithEvents fbd As FolderBrowserDialog
@@ -829,7 +900,7 @@ Partial Class Form1
     Friend WithEvents bwRefresh As System.ComponentModel.BackgroundWorker
     Friend WithEvents F1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents F2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents F3DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents F4DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F5DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F6DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
@@ -838,8 +909,22 @@ Partial Class Form1
     Friend WithEvents F9DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F10DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F11DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
-    Friend WithEvents F12DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents F12DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents F13 As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F15DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
     Friend WithEvents F16 As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents Column1 As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents C1DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C2DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C3DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C4DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents C5DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C12DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C13DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents C18DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C19DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C20DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents C21DataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents C22DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
+    Friend WithEvents C23DataGridViewTextBoxColumn As KryptonDataGridViewNumericUpDownColumn
 End Class
